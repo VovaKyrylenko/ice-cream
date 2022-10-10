@@ -1,0 +1,47 @@
+@mixin fonts(
+   $ff: Montserrat SemiBold,
+   $fw: 400,
+   $fs: 14px,
+   $lh: 16px,
+   $ls: 0.03em
+) {
+   font-family: $ff;
+   font-weight: $fw;
+   font-size: $fs;
+   line-height: $lh / $fs;
+   letter-spacing: $ls;
+}
+
+@mixin margin-auto {
+   margin: 0 auto;
+}
+
+@mixin flex($ai: center, $jc: center, $gap: 32px) {
+   display: flex;
+   align-items: $ai;
+   justify-content: $jc;
+   gap: $gap;
+}
+
+@mixin block(
+   $w: 100px,
+   $h: 100px,
+   $radius: 0,
+   $border: 0,
+   $shadow: 0,
+   $bg: teal
+) {
+   width: $w;
+   height: $h;
+   border-radius: $radius;
+   border: $border;
+   box-shadow: $shadow;
+   background: $bg;
+}
+
+@mixin centerAbsolute($top: 50%, $left: 50%, $transX: -50%, $transY: -50%) {
+   position: absolute;
+   top: $top;
+   left: $left;
+   transform: translate($transX, $transY);
+}
