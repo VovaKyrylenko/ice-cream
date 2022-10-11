@@ -1,3 +1,4 @@
-.circle {
-   @include block($radius: 50%);
+body {
+   color: getColor('txt-white');
+   @include fonts();
 }
