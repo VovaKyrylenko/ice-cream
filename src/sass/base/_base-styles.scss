@@ -1,8 +1,0 @@
-body {
-   color: getColor('txt-white');
-   // @include flex;
-}
-
-p {
-   @include fonts($fw: 900);
-}

@@ -1,8 +1,8 @@
-@import './base/base-styles';
 @import './base/common';
 @import './base/reset';
-@import '/src/sass/utils/mixins';
+@import './utils/mixins';
 @import './utils/vars';
+@import './base/base-styles';
 
 @import './layouts/about';
 @import './layouts/advantages';
