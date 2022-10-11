@@ -1,7 +1,7 @@
-@import './base/common';
 @import './base/reset';
-@import './utils/mixins';
+@import './base/common';
 @import './utils/vars';
+@import './utils/mixins';
 @import './base/base-styles';
 
 @import './layouts/about';
@@ -12,12 +12,12 @@
 @import './layouts/gallery';
 @import './layouts/header-hero';
 @import './layouts/products';
-
 @import './components/arrow';
 @import './components/btn-border';
 @import './components/btn-fill';
 @import './components/link';
 @import './components/social-list';
+
 @import './components/modals/about-modal';
 @import './components/modals/franchise-modal';
 @import './components/modals/hero-modal';
