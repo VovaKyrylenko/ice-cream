@@ -1,0 +1,3 @@
+.circle {
+   @include block($radius: 50%);
+}
