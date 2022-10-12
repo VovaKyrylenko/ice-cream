@@ -1,10 +1,4 @@
-@mixin fonts(
-   $ff: Montserrat SemiBold,
-   $fw: 400,
-   $fs: 14px,
-   $lh: 16px,
-   $ls: 0.03em
-) {
+@mixin fonts($ff: Montserrat, $fw: 400, $fs: 14px, $lh: 16px, $ls: 0) {
    font-family: $ff;
    font-weight: $fw;
    font-size: $fs;
@@ -16,20 +10,21 @@
    margin: 0 auto;
 }
 
-@mixin flex($ai: center, $jc: center, $gap: 32px) {
+@mixin flex($ai: center, $jc: center, $gap: 32px, $fd: row) {
    display: flex;
    align-items: $ai;
    justify-content: $jc;
    gap: $gap;
+   flex-direction: $fd;
 }
 
 @mixin block(
    $w: 100px,
-   $h: 100px,
+   $h: auto,
    $radius: 0,
    $border: 0,
    $shadow: 0,
-   $bg: teal
+   $bg: transparent
 ) {
    width: $w;
    height: $h;
