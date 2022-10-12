@@ -1,0 +1,111 @@
+.modal-ingridients {
+   @include block(
+      $w: 280px,
+      $h: auto,
+      $radius: 10px,
+      $border: 2px solid getColor($key: 'accent'),
+      $shadow: 0,
+      $bg: getColor($key: 'txt-white')
+   );
+   @include flex($ai: center, $jc: center, $gap: 0, $fd: column);
+   padding: 28px 20px;
+   @include centerAbsolute;
+   &__element-kkl {
+      @include block(
+         $w: 43px,
+         $h: 43px,
+         $radius: 50%,
+         $shadow: 0px 6px 20px rgba(10, 136, 23, 0.25),
+         $bg: #9cbe8f
+      );
+      margin-bottom: 8px;
+      @include flex;
+      @include fonts($fs: 10px, $lh: 28px, $fw: 500);
+      margin-top: -1px;
+   }
+   &__form {
+      @include flex($fd: column, $gap: 16px);
+      width: 100%;
+   }
+   &__image {
+      @include block($w: 130px, $h: 130px, $radius: 50%);
+      position: absolute;
+      top: -7px;
+      left: 0;
+   }
+   &__image-element {
+      @include block(
+         $w: 130px,
+         $h: 130px,
+         $radius: 50%,
+         $bg: (
+            linear-gradient(
+               0deg,
+               rgba(156, 190, 143, 0.7),
+               rgba(156, 190, 143, 0.7)
+            ),
+            #d9d9d9,
+         ),
+         $shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25)
+      );
+      margin-bottom: 24px;
+   }
+   &__ingridients-list {
+      @include flex($fd: column, $gap: 11px);
+      width: 100%;
+      margin-bottom: 48px;
+   }
+   &__input {
+      background: rgba(248, 210, 78, 0.1);
+      border: 1px solid #84a178;
+      border-radius: 10px;
+      width: 100%;
+      height: 42px;
+      padding: 0 10px;
+   }
+   &__item-ingridients {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+   }
+   &__kkl-span {
+      @include fonts($fs: 10px, $lh: 12px);
+      color: getColor($key: 'txt-black');
+      margin-bottom: 9px;
+   }
+   &__label {
+      width: 100%;
+   }
+   &__list-ingridients-span {
+      @include fonts($fs: 14px, $lh: 25px);
+   }
+   &__list-kkl {
+      @include flex($gap: 9px);
+      width: 100%;
+      margin-bottom: 39px;
+   }
+   &__list-kkl-item {
+      @include block(
+         $w: calc((100% - 9px * 3) / 4),
+         $radius: 40px,
+         $border: 2px solid #9cbe8f
+      );
+      @include flex($fd: column, $gap: 0);
+   }
+
+   &__subtitle {
+      @include fonts($fw: 500, $fs: 20px, $lh: 28px);
+      margin-bottom: 24px;
+   }
+   &__title {
+      @include fonts($ff: Seymour One, $fw: 400, $fs: 20px, $lh: 28px, $ls: 0);
+      text-align: center;
+      margin-bottom: 22px;
+   }
+   &__wrapper {
+      position: relative;
+   }
+   &__textarea {
+      height: 84px;
+   }
+}
