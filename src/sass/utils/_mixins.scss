@@ -2,7 +2,7 @@
    font-family: $ff;
    font-weight: $fw;
    font-size: $fs;
-   line-height: $lh / $fs;
+   line-height: calc($lh / $fs);
    letter-spacing: $ls;
 }
 

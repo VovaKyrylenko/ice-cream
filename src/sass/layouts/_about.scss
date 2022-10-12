@@ -1,0 +1,15 @@
+.about-us {
+   padding-top: 60px;
+   padding-bottom: 60px;
+   .about-us {
+   }
+   &__title {
+   }
+   &__img {
+      @extend .circle;
+   }
+   &__txt {
+   }
+   &__btn {
+   }
+}
