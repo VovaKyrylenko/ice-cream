@@ -1,4 +1,4 @@
-<header class="container">
+<header class="container header">
     <a href="" class="logo">
         <img src="./images/header/logo.png" alt="логотип компанії">
     </a>
@@ -14,15 +14,15 @@
 </header>
 
 <!-- hero -->
-<section>
-    <div>
-        <h1>ice cream made with passion</h1>
-        <button>Products</button> 
-        <button>How it’s made?</button>
+<section class="container hero">
+    <div class="hero__info">
+        <h1 class="hero__title">ice cream made with passion</h1>
+        <a href="" class="hero__link">Products</a>
+        <a href="" class="hero__link">How it’s made?</a>
     </div>
 
-    <div>
-        <picture>
+    <div class="hero__lorem-ipsum">
+        <picture class="hero__img">
 <!-- desc -->
             <source srcset="
                 ./images/header/img2d@1x.webp    1x,
@@ -43,15 +43,15 @@
                   " type="image/jpeg" media="(max-width: 1199px)">
             <img src="./images/header/img2t@1x.jpg" alt="тарілка з (кульковим морозивом * 9)">
         </picture>
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</P>
+        <p class="hero__exscerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
 <!-- не знайшов використання стрілки, не розумію її практичного значення -->
-        <svg>
+        <svg class="hero__arrow">
             <use href="./images/icons.svg#icon-arrow-default"></use>
         </svg>
     </div>
 
-    <div>
-        <picture>
+    <div class="hero__company-info">
+        <picture class="hero__img-animation">
 <!-- desc -->
             <source srcset="
                 ./images/header/img1d@1x.webp    1x,
@@ -82,15 +82,15 @@
             <img src="./images/header/img1d@1x.jpg" alt="упоротий змій-морозинич">
         </picture>
 
-        <div>
-            <ul>
-                <li>
-                    <p>16</p>
-                    <p>cafes</p>
+        <div class="hero__cafe-info">
+            <ul class="hero__list-cafe">
+                <li class="hero__item-cafe">
+                    <p class="hero__numbers">16</p>
+                    <p class="hero__text">cafes</p>
                 </li>
-                <li>
-                    <p>23</p>
-                    <p>food trucks</p>
+                <li class="hero__item-cafe">
+                    <p class="hero__numbers">23</p>
+                    <p class="hero__text">food trucks</p>
                 </li>
             </ul>
         </div>
