@@ -6,9 +6,9 @@
    &__title {
    }
    &__img {
-      @extend .circle;
+      @extend .circle !optional;
    }
-   &__txt {
+   &__txt {      
    }
    &__btn {
    }

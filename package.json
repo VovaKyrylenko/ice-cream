@@ -5,7 +5,8 @@
   "homepage": "https://VovaKyrylenko.github.io/ice-cream",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /ice-cream/"
+    "build": "parcel build src/*.html --public-url /ice-cream/",
+    "watch": "parcel serve src/*.html"
   },
   "repository": {
     "type": "git",
