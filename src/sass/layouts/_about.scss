@@ -1,15 +1,177 @@
 .about-us {
    padding-top: 60px;
    padding-bottom: 60px;
-   .about-us {
+
+   background: getColor(background);
+   background-color: getColor(background);
+
+   &__block {
+      @media screen and (min-width: $tablet) {
+         display: flex;
+         justify-content: start;
+         align-items: start;
+      }
    }
+
+   .about-us__subtitle {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22 / 18;
+      text-align: center;
+      text-transform: uppercase;
+      color: getColor('txt-white');
+   }
+
    &__title {
+      font-family: 'Seymour One';
+      font-size: 30px;
+      line-height: 38 / 30;
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: getColor('txt-white');
+
+      margin-top: 12px;
    }
+
+   &__thumb {
+      display: block;
+      position: relative;
+      margin: 53px auto 0;
+
+      @media screen and (min-width: $tablet) {
+         margin: 72px 0 0;
+         width: 330px;
+         height: 330px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         margin: 82px 0 0;
+         width: 490px;
+         height: 490px;
+      }
+
+      &::before {
+         content: '';
+         display: block;
+         @extend .circle !optional;
+
+         position: absolute;
+         top: -8%;
+         left: 0;
+         z-index: 2;
+
+         width: 100%;
+         height: 100%;
+
+         background-color: getColor('accent');
+         background: linear-gradient(0deg, #f8d24eb3, #f8d24eb3), #d9d9d9;
+         box-shadow: 0 4.48583px 16.8218px #99721740;
+
+         @media screen and (min-width: $mobile) {
+            width: 278px;
+            height: 278px;
+         }
+
+         @media screen and (min-width: $tablet) {
+            width: 330px;
+            height: 330px;
+         }
+
+         @media screen and (min-width: $desktop) {
+            width: 490px;
+            height: 490px;
+         }
+      }
+   }
+
    &__img {
-      @extend .circle;
+      @extend .circle !optional;
+      position: relative;
+      z-index: 3;
+
+      @media screen and (min-width: $mobile) {
+         width: 278px;
+         height: 278px;
+      }
+
+      @media screen and (min-width: $tablet) {
+         width: 330px;
+         height: 330px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         width: 490px;
+         height: 490px;
+      }
    }
+
+   &__right-block {
+      margin-top: 40px;
+      padding: 0 30px;
+
+      @media screen and (min-width: $tablet) {
+         padding: 0;
+         margin-left: auto;
+         margin-top: 79px;
+         width: 334px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         margin-right: 105px;
+         margin-top: 172px;
+         width: 464px;
+      }
+   }
+
    &__txt {
+      font-size: 12px;
+      line-height: 21 / 12;
+      text-align: center;
+      letter-spacing: 0.04em;
+      color: getColor('txt-white');
+
+      &:not(--last) {
+         margin-bottom: 4px;
+
+         @media screen and (min-width: $tablet) {
+            margin-bottom: 8px;
+         }
+      }
+
+      &--last {
+         display: none;
+
+         @media screen and (min-width: $tablet) {
+            display: block;
+         }
+      }
+
+      @media screen and (min-width: $tablet) {
+         text-align: left;
+      }
    }
+
    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 12px 34px;
+
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18 / 14;
+      text-align: center;
+      color: getColor('txt-black');
+
+      background: getColor('accent');
+      border-radius: 10px;
+   }
+
+   &__icon {
+      margin-left: 5px;
    }
 }

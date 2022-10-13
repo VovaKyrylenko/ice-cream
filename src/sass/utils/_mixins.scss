@@ -40,3 +40,9 @@
    left: $left;
    transform: translate($transX, $transY);
 }
+
+.circle {
+   border-radius: 50%;
+   border: none;
+   overflow: hidden;
+}
