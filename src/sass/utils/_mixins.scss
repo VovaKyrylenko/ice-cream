@@ -2,11 +2,11 @@
    font-family: $ff;
    font-weight: $fw;
    font-size: $fs;
-   line-height: calc($lh / $fs);
+   line-height: math.div($lh, $fs);
    letter-spacing: $ls;
 }
 
-@mixin margin-auto {
+@mixin margin-auto() {
    margin: 0 auto;
 }
 
@@ -39,4 +39,36 @@
    top: $top;
    left: $left;
    transform: translate($transX, $transY);
+}
+
+@mixin mobile() {
+   @media (max-width: 767px) {
+      @content;
+   }
+}
+@mixin tablet() {
+   @media (min-width: 768px) and (max-width: 1199px) {
+      @content;
+   }
+}
+@mixin desktop() {
+   @media (min-width: 1200px) {
+      @content;
+   }
+}
+
+@mixin isRetinaDisplay() {
+   @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      @content;
+   }
+}
+
+@mixin isNotRetinaDisplay() {
+   @media (max-device-pixel-ratio: 1),
+      (min-resolution: 96dpi),
+      (min-resolution: 1dppx) {
+      @content;
+   }
 }
