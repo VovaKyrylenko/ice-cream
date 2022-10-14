@@ -16,3 +16,14 @@ body {
 
 //    transition: scale var(--animation-time) var(--transition-timing-function);
 // }
+
+.container {
+   width: $mobile;
+   @include tablet() {
+      width: $tablet;
+   }
+
+   @include desktop() {
+      width: $desktop;
+   }
+}

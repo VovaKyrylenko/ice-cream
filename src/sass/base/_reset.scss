@@ -151,3 +151,8 @@ textarea {
 ul {
    list-style: none;
 }
+
+input:focus-visible,
+textarea:focus-visible {
+   outline: none;
+}
