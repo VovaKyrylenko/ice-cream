@@ -3,7 +3,7 @@
    font-family: $ff;
    font-weight: $fw;
    font-size: $fs;
-   line-height: math.div($lh, $fs);
+   line-height: calc($lh / $fs);
    letter-spacing: $ls;
 }
 
@@ -20,15 +20,14 @@
    gap: $gap;
    flex-direction: $fd;
 }
+
 // Міксін для створення геометричних фігур \ширина\висота\закруглення кутів\рамка\тінь\колір фону\
-@mixin block(
-   $w: 100px,
+@mixin block($w: 100px,
    $h: auto,
    $radius: 0,
    $border: 0,
    $shadow: 0,
-   $bg: transparent
-) {
+   $bg: transparent) {
    width: $w;
    height: $h;
    border-radius: $radius;
@@ -68,18 +67,20 @@
 
 //  Ретінізоване зображення
 @mixin isRetinaDisplay() {
+
    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+   (min-resolution: 192dpi),
+   (min-resolution: 2dppx) {
       @content;
    }
 }
 
 //  Неретінізоване зображення
 @mixin isNotRetinaDisplay() {
+
    @media (max-device-pixel-ratio: 1),
-      (min-resolution: 96dpi),
-      (min-resolution: 1dppx) {
+   (min-resolution: 96dpi),
+   (min-resolution: 1dppx) {
       @content;
    }
 }
