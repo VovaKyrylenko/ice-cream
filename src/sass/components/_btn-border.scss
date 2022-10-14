@@ -1,0 +1,192 @@
+// секція HEADER-HERO
+// кнопка "Products"
+.hero-btn-one {
+   // Планшетна та мобільна версія
+   display: block;
+   width: 62px;
+   height: 24px;
+
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 8px;
+   line-height: 10px;
+
+   background-color: transparent;
+   color: #000000;
+   border: 2px solid #f8d24e;
+   border-radius: 8px;
+
+   // десктопна версія
+   @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 18px;
+      border-radius: 10px;
+   }
+
+   &:hover {
+      color: #000000;
+      border: 2px solid #0a8817;
+   }
+   &:focus {
+      color: #fcfcfc;
+      border: 2px solid #0a8817;
+   }
+   //    disabled
+   //    color: #000000;
+   //    border: 2px solid #ABABAB;
+}
+
+// секція HEADER-HERO
+// ссилка "How it’s made?"
+.hero-link {
+   // Планшетна та мобільна версія
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 8px;
+   line-height: 10px;
+   text-decoration: underline;
+   color: #f8d24e;
+
+   // десктопна версія
+   @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 17px;
+   }
+   &:hover {
+      color: #0a8817;
+   }
+   &:focus {
+      color: #fcfcfc;
+   }
+   //    disabled
+   //    color: #ABABAB;
+}
+
+// секція HEADER-HERO
+// кнопка "Buy now"
+// десктопна, планшетна і мобільна версія
+.header-btn {
+   display: block;
+   width: 152px;
+   height: 42px;
+
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 17px;
+   color: #000000;
+   background-color: #f8d24e;
+   border: 2px solid transparent;
+   border-radius: 10px;
+
+   &:hover {
+      color: #000000;
+      background-color: #0a8817;
+   }
+   &:focus {
+      color: #fcfcfc;
+      background-color: #0a8817;
+   }
+   //    disabled
+   //    color: #000000;
+   //   background-color: #ABABAB;
+}
+
+// секція ADVANTAGES
+// кнопка "Read more"
+// десктопна, планшетна і мобільна версія
+.advantages-btn {
+   display: block;
+   width: 164px;
+   height: 42px;
+
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 18px;
+
+   color: #000000;
+   background-color: #f8d24e;
+   border: 2px solid transparent;
+   border-radius: 10px;
+
+   &:hover {
+      color: #000000;
+      background-color: #0a8817;
+   }
+   &:focus {
+      color: #fcfcfc;
+      background-color: #0a8817;
+   }
+   //    disabled
+   //    color: #000000;
+   //   background-color: #ABABAB;
+}
+
+// секція CONTACTS
+// кнопка "Our Locations"
+// десктопна, планшетна і мобільна версія
+.contacts-btn-one {
+   display: block;
+   width: 196px;
+   height: 42px;
+
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 18px;
+
+   color: #000000;
+   background-color: #f8d24e;
+   border: 2px solid transparent;
+   border-radius: 10px;
+
+   &:hover {
+      color: #000000;
+      background-color: #0a8817;
+   }
+   &:focus {
+      color: #fcfcfc;
+      background-color: #0a8817;
+   }
+   //    disabled
+   //    color: #000000;
+   //   background-color: #ABABAB;
+}
+
+// секція CONTACTS
+// кнопка "Franchise"
+// десктопна, планшетна і мобільна версія
+.contacts-btn-two {
+   display: block;
+   width: 196px;
+   height: 42px;
+
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 18px;
+
+   background-color: transparent;
+   color: #000000;
+   border: 2px solid #f8d24e;
+   border-radius: 10px;
+
+   &:hover {
+      color: #000000;
+      border: 2px solid #0a8817;
+   }
+   &:focus {
+      color: #fcfcfc;
+      border: 2px solid #0a8817;
+   }
+   //    disabled
+   //    color: #000000;
+   //    border: 2px solid #ABABAB;
+}
