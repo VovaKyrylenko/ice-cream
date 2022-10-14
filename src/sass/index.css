@@ -149,6 +149,45 @@ textarea {
   resize: none;
 }
 
+ul {
+  list-style: none;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
 body {
-  color: getColor("txt-white");
+  font-family: Montserrat, sans-serif;
+  background-color: #84a178;
+  color: #fcfcfc;
+}
+
+.container {
+  width: 320px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }/*# sourceMappingURL=index.css.map */
