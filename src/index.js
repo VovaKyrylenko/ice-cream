@@ -1,5 +1,5 @@
 $('.customer').slick({
-    dots: true,
+    dots: false,
     prevArrow: false,
     nextArrow: false,
     infinite: true,
