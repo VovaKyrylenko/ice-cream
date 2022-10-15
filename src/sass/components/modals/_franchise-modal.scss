@@ -99,4 +99,8 @@
       height: 84px;
    }
 }
+.submit-btn {
+   display: block;
+   @include margin-auto;
+}
 
