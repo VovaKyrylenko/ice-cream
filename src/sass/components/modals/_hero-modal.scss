@@ -240,3 +240,8 @@
       }
    }
 }
+
+.modal-title {
+   @include fonts($ff: Seymour One, $fw: 400, $fs: 20px, $lh: 28px, $ls: 0);
+   text-align: center;
+}
