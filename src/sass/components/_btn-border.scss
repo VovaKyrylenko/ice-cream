@@ -7,11 +7,10 @@
    height: 24px;
 
    @include fonts($fw: 600, $fs: 8px, $lh: 10px);
-   font-family: Montserrat;
    font-style: normal;
 
    background-color: transparent;
-   color: #000000;
+   color: getColor(txt-black);
    border: 2px solid getColor(accent);
    border-radius: 8px;
 
@@ -45,7 +44,7 @@
    font-style: normal;
 
    background-color: transparent;
-   color: #000000;
+   color: getColor(txt-black);
    border: 2px solid getColor(accent);
    border-radius: 10px;
 
