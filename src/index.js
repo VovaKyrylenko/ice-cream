@@ -1,15 +1,15 @@
-$('.gallery-js').slick({ 
-   dots: false, 
-   infinite: true, 
-   arrows: false, 
-   speed: 300, 
-   fade: true, 
-   slidesToShow: 1, 
-   adaptiveHeight: true, 
-   autoplay: true, 
-   autoplaySpeed: 3000, 
+$('.gallery-js').slick({
+   dots: false,
+   infinite: true,
+   arrows: false,
+   speed: 300,
+   fade: true,
+   slidesToShow: 1,
+   adaptiveHeight: true,
+   autoplay: true,
+   autoplaySpeed: 3000,
    cssEase: 'ease-in',
- });
+});
 
 $('.customer').slick({
    dots: true,
@@ -23,6 +23,7 @@ $('.customer').slick({
 });
 
 // ------------- Змінює класи Slider відповідно до БЕМ -------------
+/*
 (() => {
    const refs = {
       customer__dots: document.querySelector('.slick-dots'),
@@ -47,3 +48,48 @@ $('.customer').slick({
       }
    }, 100);
 })();
+*/
+
+// ------------- Модалки -------------
+(() => {
+   const refs = {
+      backdrop: document.querySelector('[data-backdrop]'),
+
+      openModalBtn: document.querySelector('[data-modal-franches-open]'),
+      closeModalBtn: document.querySelector('[data-modal-franches-close]'),
+      modal: document.querySelector('[data-modal-franches]'),
+
+      autofocus: document.querySelector('[data-autofocus]'),
+   };
+
+   console.log('AAA')
+   refs.openModalBtn.addEventListener('click', toggleModal(true));
+   refs.closeModalBtn.addEventListener('click', toggleModal(false));
+   console.log('BBB')
+
+   function toggleModal(value) {
+      console.log(value)
+      refs.backdrop.classList.toggle('visually-hidden');
+      if (value) {
+         refs.modal.style.display = 'block';
+         refs.backdrop.classList.toggle('visually-hidden');
+      }
+      else {
+         refs.modal.style.display = 'none';
+         refs.autofocus.focus();
+      }
+   }
+})();
+
+// (() => {
+//    const refs = {
+//       checkBox: document.querySelector('[data-policy]'),
+//       submitBtn: document.querySelector('[data-submit-btn]'),
+//    };
+
+//    refs.checkBox.addEventListener('change', toggleAttr);
+
+//    function toggleAttr() {
+//       refs.submitBtn.toggleAttribute('disabled');
+//    }
+// })();
