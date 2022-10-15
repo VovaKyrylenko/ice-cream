@@ -1,0 +1,126 @@
+.container{
+    width: $mobile;
+    padding: 80px 20px 394px;
+
+    @include margin-auto;
+    
+    @include tablet() {
+        width: $tablet;
+        padding: 60px 31px 383px;
+       
+    }
+
+    @include desktop() {
+        width: $desktop;
+        padding: 128px 116px 207px;
+       
+    }
+}
+
+.customer{
+    background-image: url('../images/bckg/bcgd@1x.webp');
+    @include mobile() {
+    
+            @include isNotRetinaDisplay() {
+                background-image: url('../images/bckg/bcgm@1x.webp');
+                background-image: url('../images/bckg/bcgm@1x.jpg');
+            }
+    
+            @include isRetinaDisplay() {
+                background-image: url('../images/bckg/bcgm@2x.webp');
+                background-image: url('../images/bckg/bcgm@2x.jpg');
+            }
+    
+        }
+    
+        @include tablet() {
+    
+            @include fonts($fw: 500, $fs: 14px, $lh: 35.7px, $ls: 0.04em);
+    
+            @include isNotRetinaDisplay() {
+                background-image: url('../images/bckg/bcgt@1x.webp');
+                background-image: url('../images/bckg/bcgd@1x.jpg');
+            }
+    
+            @include isRetinaDisplay() {
+                background-image: url('../images/bckg/bcgt@2x.webp');
+                background-image: url('../images/bckg/bcgt@2x.jpg');
+            }
+    
+        }
+    
+        @include desktop() {
+    
+            @include fonts($fw: 500, $fs: 16px, $lh: 40.8px, $ls: 0.04em);
+    
+            @include isNotRetinaDisplay() {
+                background-image: url('../images/bckg/bcgd@1x.webp');
+                background-image: url('../images/bckg/bcgd@1x.jpg');
+            }
+    
+            @include isRetinaDisplay() {
+                background-image: url('../images/bckg/bcgd@2x.webp');
+                background-image: url('../images/bckg/bcgd@2x.jpg');
+            }
+       }
+    &__card-text {
+            @include fonts($fw: 400, $fs: 12px, $lh: 30.6px);
+            color: getColor('txt-white');
+            
+        }
+    
+    &__card-signature {
+            @include fonts($fw: 500, $fs: 20px, $lh: 51px);
+             color: getColor('txt-black');
+            
+             @include tablet() {
+                  @include fonts($fw: 500, $fs: 16px, $lh: 51px);
+             }
+            
+             @include desktop() {
+                        @include fonts($fw: 500, $fs: 16px, $lh: 51px);
+             }
+            
+          }
+    &__card-img{
+            background: #6E6E6E;
+            border-radius: 44px;
+            margin-bottom: 32px;
+            
+            @include tablet() {
+                margin-bottom: 28px;
+
+            }
+            @include desktop() {
+                margin-bottom: 32px;
+            }
+
+
+    }
+    &__card-reviews{
+        max-width: 280px;
+        padding: 34px 39px;
+        background-color: getColor('background');
+        border-radius: 10px;
+        margin-bottom: 30px;
+
+        @include tablet() {
+            max-width: 705px;
+            padding: 29px 80px;
+            border-radius: 24px;
+            margin-bottom: 32px;
+        }
+
+        @include desktop() {
+            min-width: 968px;
+            padding: 39px 109px 47px 109px;
+            border-radius: 24px;
+            margin-bottom: 32px;
+            
+        }
+    }
+    &__card{
+        text-align: center;
+    }
+}
+

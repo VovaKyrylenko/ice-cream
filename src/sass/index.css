@@ -178,6 +178,157 @@ body {
   }
 }
 
+.container {
+  width: 320px;
+  padding: 80px 20px 394px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: 768px;
+    padding: 60px 31px 383px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding: 128px 116px 207px;
+  }
+}
+
+.customer {
+  background-image: url("../images/bckg/bcgd@1x.webp");
+}
+@media (max-width: 767px) and (max-device-pixel-ratio: 1), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1), (max-width: 767px) and (min-resolution: 96dpi), (max-width: 767px) and (min-resolution: 1dppx) {
+  .customer {
+    background-image: url("../images/bckg/bcgm@1x.webp");
+    background-image: url("../images/bckg/bcgm@1x.jpg");
+  }
+}
+@media (max-width: 767px) and (min-device-pixel-ratio: 2), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 192dpi), (max-width: 767px) and (min-resolution: 2dppx) {
+  .customer {
+    background-image: url("../images/bckg/bcgm@2x.webp");
+    background-image: url("../images/bckg/bcgm@2x.jpg");
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .customer {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.55;
+    letter-spacing: 0.04em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) and (max-device-pixel-ratio: 1), (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1), (min-width: 768px) and (max-width: 1199px) and (min-resolution: 96dpi), (min-width: 768px) and (max-width: 1199px) and (min-resolution: 1dppx) {
+  .customer {
+    background-image: url("../images/bckg/bcgt@1x.webp");
+    background-image: url("../images/bckg/bcgd@1x.jpg");
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
+  .customer {
+    background-image: url("../images/bckg/bcgt@2x.webp");
+    background-image: url("../images/bckg/bcgt@2x.jpg");
+  }
+}
+@media (min-width: 1200px) {
+  .customer {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 2.55;
+    letter-spacing: 0.04em;
+  }
+}
+@media (min-width: 1200px) and (max-device-pixel-ratio: 1), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1), (min-width: 1200px) and (min-resolution: 96dpi), (min-width: 1200px) and (min-resolution: 1dppx) {
+  .customer {
+    background-image: url("../images/bckg/bcgd@1x.webp");
+    background-image: url("../images/bckg/bcgd@1x.jpg");
+  }
+}
+@media (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
+  .customer {
+    background-image: url("../images/bckg/bcgd@2x.webp");
+    background-image: url("../images/bckg/bcgd@2x.jpg");
+  }
+}
+.customer__card-text {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2.55;
+  letter-spacing: 0;
+  color: #fcfcfc;
+}
+.customer__card-signature {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 2.55;
+  letter-spacing: 0;
+  color: #131313;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .customer__card-signature {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 3.1875;
+    letter-spacing: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .customer__card-signature {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 3.1875;
+    letter-spacing: 0;
+  }
+}
+.customer__card-img {
+  background: #6E6E6E;
+  border-radius: 44px;
+  margin-bottom: 32px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .customer__card-img {
+    margin-bottom: 28px;
+  }
+}
+@media (min-width: 1200px) {
+  .customer__card-img {
+    margin-bottom: 32px;
+  }
+}
+.customer__card-reviews {
+  max-width: 280px;
+  padding: 34px 39px;
+  background-color: #84a178;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .customer__card-reviews {
+    max-width: 705px;
+    padding: 29px 80px;
+    border-radius: 24px;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .customer__card-reviews {
+    min-width: 968px;
+    padding: 39px 109px 47px 109px;
+    border-radius: 24px;
+    margin-bottom: 32px;
+  }
+}
+.customer__card {
+  text-align: center;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
