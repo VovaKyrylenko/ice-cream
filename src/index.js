@@ -3,6 +3,6 @@ $('.customer').slick({
     prevArrow: false,
     nextArrow: false,
     infinite: true,
-    speed: 500,
+    speed: 200ms,
     cssEase: 'linear'
   });
