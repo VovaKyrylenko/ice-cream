@@ -178,6 +178,208 @@ body {
   }
 }
 
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer__wrapper {
+  margin-right: auto;
+  margin-bottom: 42px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer__wrapper {
+    display: flex;
+  }
+}
+
+.footer__wrapper-title {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0;
+  color: #fcfcfc;
+  margin-bottom: 16px;
+  width: 232px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer__wrapper-title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2307692308;
+    letter-spacing: 0.04em;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__wrapper-title {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.2333333333;
+    letter-spacing: 0.04em;
+  }
+}
+
+.footer__wrapper-subtitle {
+  width: 200px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.2058823529;
+  letter-spacing: 0.04em;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer__wrapper-subtitle {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2291666667;
+    letter-spacing: 0.06em;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__wrapper-subtitle {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 1.224137931;
+    letter-spacing: 0.06em;
+  }
+}
+
+.footer__wrapper-socials {
+  margin-bottom: 38px;
+}
+
+.footer__wrapper-list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.footer__address {
+  display: flex;
+  justify-content: center;
+  width: 244px;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+
+.footer__address-subtitle {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: #131313;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer__address-subtitle {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.06em;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__address-subtitle {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+  }
+}
+
+.footer__address-link {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: #fcfcfc;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer__address-link {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.06em;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__address-link {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+  }
+}
+
+.border__mobile {
+  display: block;
+  width: 100%;
+  border-radius: 1px;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .border__mobile {
+    display: block;
+    width: 100%;
+    border-radius: 1px;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .border__mobile {
+    display: block;
+    width: 100%;
+    border-radius: 1px;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 16px;
+  }
+}
+
+.footer__copyright {
+  width: 100%;
+}
+
+.footer__copyright-subtitle {
+  width: 280px;
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  letter-spacing: 0;
+  color: #7a7a7a;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer__copyright-subtitle {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__copyright-subtitle {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
