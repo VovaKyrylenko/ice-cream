@@ -5,6 +5,7 @@
     position: relative;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
 
     @include desktop {
         flex-direction: row;
@@ -16,13 +17,22 @@
     // left: 20px;
     // top: 12px;
     margin-top: 12px;
-    margin-left: 20px;
+    // margin-left: 20px;
     align-self: flex-start;
+
+    @include desktop {
+        margin-top: 0;
+    }
 }
 
 .logo__img {
     width: 41px;
     height: 37px;
+
+    @include desktop {
+        width: 60px;
+        height: 65px;
+    }
 }
 
 .nav {
@@ -30,6 +40,12 @@
     align-items: center;
     margin-top: 50px;
     flex-direction: column;
+
+    @include mobile {
+        & .btn__modal {
+            display: none;
+        }
+    }
 
     @include desktop {
         flex-direction: row;
@@ -53,11 +69,12 @@
     width: 150px;
     margin-top: auto;
     // margin-top: 150px;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
     // display: none;
     
     @include desktop {
-        margin-bottom: 0;
+        margin-bottom: auto;
+        margin-top: auto;
     }
 }
 
@@ -120,4 +137,164 @@
 
 .hero {
     @include margin-auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    position: relative;
+    margin-top: 62px;
+
+    @include tablet {
+        flex-direction: row;
+        margin-top: 28px;
+    }
+
+    @include desktop {
+        flex-direction: row;
+        margin-top: 28px;
+    }
 }
+
+.hero__positions {
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+}
+
+.hero__info {
+    margin-bottom: 28px;
+}
+
+.hero__title {
+    @include fonts ($ff: Seymour One, $fs: 26px, $lh: 33px, $ls: 0.04em);
+    text-transform: uppercase;
+    
+    & span {
+        font-size: 34px;
+    }
+
+    @include tablet {
+        width: 200px;
+
+        font-size: 18px;
+        line-height: 23px;
+        & span {
+            font-size: 24px;
+        }
+    }
+
+    @include desktop {
+        width: 370px;
+        font-size: 38px;
+        line-height: 48px;
+    }
+}
+
+.hero__list-anchor {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+
+    @include mobile {
+        margin-top: 32px;
+    }
+}
+
+// lorem
+
+.hero__lorem-ipsum {
+    display: flex;
+    flex-direction: row;
+
+    @include mobile {
+        display: none;
+    }
+
+    @include tablet {
+        gap: 33px;
+    }
+
+    @include desktop {
+        gap: 14px;
+    }
+}
+
+.hero__img {
+    display: inline-block;
+}
+
+.hero__exscerpt {
+    @include fonts ($fs: 12px, $lh: 17px);
+    width: 150px;
+}
+
+.hero__lorem {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero__arrow {
+    position: absolute;
+    bottom: 15px;
+    fill: getColor(txt-white);
+
+    @include desktop {
+        bottom: 40px;
+    }
+}
+
+// img hero
+
+.hero__text {
+    @include fonts ($fs: 8px, $lh: 10px);
+    text-align: right;
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.hero__numbers {
+    text-align: right;
+    @include fonts ($fw: 900, $fs: 28px, $lh: 34px);
+    color: getColor(txt-black);
+
+    @include desktop {
+        font-size: 46px;
+        line-height: 56px;
+    }
+}
+
+.hero__item-cafe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hero__list-cafe {
+
+    @include mobile {
+        display: none;
+    }
+
+    @include tablet {
+
+    }
+}
+
+.hero__company-info {
+    margin-left: auto;
+}
+
+.hero__img-animation {
+    display: inline-block;
+    width: 270px;
+    height: auto;
+    margin-left: auto;
+    position: absolute;
+    bottom: 0;
+    
+    display: none;
+}
+
