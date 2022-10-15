@@ -156,3 +156,9 @@ input:focus-visible,
 textarea:focus-visible {
    outline: none;
 }
+
+img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}

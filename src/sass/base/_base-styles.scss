@@ -19,11 +19,15 @@ body {
 
 .container {
    width: $mobile;
+   padding: 0 20px;
+
    @include tablet() {
       width: $tablet;
+      padding: 0 32px;
    }
 
    @include desktop() {
       width: $desktop;
+      padding: 0 16px;
    }
 }
