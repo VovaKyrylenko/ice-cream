@@ -9,7 +9,7 @@
    @include fonts($fw: 600, $fs: 14px, $lh: 18px);
    font-style: normal;
 
-   color: #000000;
+   color: getColor(txt-black);
    background-color: getColor(btn-default);
    border: 2px solid transparent;
    border-radius: 10px;
@@ -37,7 +37,7 @@
    @include fonts($fw: 600, $fs: 14px, $lh: 17px);
    font-style: normal;
 
-   color: #000000;
+   color: getColor(txt-black);
    background-color: getColor(btn-default);
    border: 2px solid transparent;
    border-radius: 10px;
@@ -65,11 +65,43 @@
    @include fonts($fw: 600, $fs: 14px, $lh: 18px);
    font-style: normal;
 
-   color: #000000;
+   color: getColor(txt-black);
    background-color: getColor(btn-default);
    border: 2px solid transparent;
    border-radius: 10px;
 
+   &:hover {
+      background-color: getColor(btn-hover);
+   }
+   &:focus {
+      color: getColor(txt-white);
+      background-color: getColor(btn-focus);
+   }
+   &:disabled {
+      background-color: getColor(btn-disabled);
+   }
+}
+
+// кнопка "Submit" для модалок
+.submit-btn {
+   // мобільна версія
+   display: block;
+   width: 114px;
+   height: 42px;
+
+   @include fonts($fw: 600, $fs: 12px, $lh: 15px);
+   font-style: normal;
+
+   color: getColor(txt-black);
+   background-color: getColor(btn-default);
+   border: 2px solid transparent;
+   border-radius: 10px;
+
+   // десктопна, планшетна версія
+   @media screen and (min-width: 480px) {
+      @include fonts($fw: 600, $fs: 14px, $lh: 17px);
+      width: 121px;
+   }
    &:hover {
       background-color: getColor(btn-hover);
    }
