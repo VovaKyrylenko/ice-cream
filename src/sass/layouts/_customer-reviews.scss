@@ -69,6 +69,16 @@
         @include fonts($fw: 400, $fs: 12px, $lh: 30.6px);
         color: getColor('txt-white');
 
+        @include tablet() {
+            @include fonts($fw: 500, $fs: 14px, $lh: 26.04px, $ls: 0.04em);
+        }
+
+        @include desktop() {
+            @include fonts($fw: 500, $fs: 16px, $lh: 29.76px, $ls: 0.04em);
+        }
+
+        
+
     }
 
     &__card-signature {
@@ -86,6 +96,8 @@
     }
 
     &__card-img {
+        margin-left: auto;
+        margin-right:auto;
         background: #6E6E6E;
         border-radius: 44px;
         margin-bottom: 32px;
@@ -128,4 +140,22 @@
     &__card {
         text-align: center;
     }
+}
+
+.customer__dots {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.customer__dot {
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    border: none;
+    width: 12px;
+    height: 12px;
+}
+
+.customer__dot--active {
+    background-color: getColor('background') ;
 }
