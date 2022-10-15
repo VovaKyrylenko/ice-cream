@@ -1,28 +1,43 @@
 <header class="container header">
    <a href="" class="logo">
-      <img src="./images/header/logo.png" alt="логотип компанії">
+      <img src="./images/header/logo.png" alt="логотип компанії" class="logo__img">
    </a>
    <nav class="nav">
-      <ul class="nav__list">
-         <li class="nav__item"><a href="" class="nav__link">Home</a></li>
-         <li class="nav__item"><a href="" class="nav__link">How it’s made?</a></li>
-         <li class="nav__item"><a href="" class="nav__link">Our products</a></li>
-         <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
-      </ul>
+       <ul class="nav__list">
+           <li class="nav__item"><a href="" class="nav__link">Home</a></li>
+           <li class="nav__item"><a href="" class="nav__link">How it’s made?</a></li>
+           <li class="nav__item"><a href="" class="nav__link">Our products</a></li>
+           <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
+        </ul>
+        <button type="button" class="btn-menu">
+            <svg width="32" height="32">
+                <use href="./images/icons.svg#icon-menu-open"></use>
+                <use href="./images/icons.svg#icon-menu-close"></use>
+            </svg>
+        </button>
+        <button type="button" class="btn__modal">Buy now</button>
    </nav>
-   <button type="button" class="btn__modal">Buy now</button> <!-- модалка -->
+   <button type="button" class="btn__modal">Buy now</button>
 </header>
 
 <!-- hero -->
 <main>
    <section class="container hero">
-      <div class="hero__info">
-         <h1 class="hero__title">ice cream made with passion</h1>
-         <a href="" class="hero__link">Products</a>
-         <a href="" class="hero__link">How it’s made?</a>
-      </div>
+        <div class="hero__positions">
+            <div class="hero__info">
+                <h1 class="hero__title">ice cream made with passion</h1>
 
-      <div class="hero__lorem-ipsum">
+                <ul class="hero__list-anchor">
+                    <li class="hero__item-anchor">
+                        <a href="" class="hero__link">Products</a>
+                    </li>
+                    <li class="hero__item-anchor">
+                        <a href="" class="hero__link">How it’s made?</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hero__lorem-ipsum">
          <picture class="hero__img">
             <!-- desc -->
             <source srcset="
@@ -44,15 +59,17 @@
                   " type="image/jpeg" media="(max-width: 1199px)">
             <img src="./images/header/img2t@1x.jpg" alt="тарілка з (кульковим морозивом * 9)">
          </picture>
-         <p class="hero__exscerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et</p>
-         <!-- не знайшов використання стрілки, не розумію її практичного значення -->
-         <svg class="hero__arrow">
-            <use href="./images/icons.svg#icon-arrow-default"></use>
-         </svg>
-      </div>
-
-      <div class="hero__company-info">
+         <div class="hero__lorem">
+            <p class="hero__exscerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et</p>
+            <svg class="hero__arrow" height="16" width="40">
+                <use href="./images/icons.svg#icon-arrow-default" class="hero__arrow-use"></use>
+            </svg>
+         </div>
+         
+            </div>
+        </div>
+        <div class="hero__company-info">
          <picture class="hero__img-animation">
             <!-- desc -->
             <source srcset="
@@ -96,5 +113,5 @@
                </li>
             </ul>
          </div>
-      </div>
+        </div>
    </section>
