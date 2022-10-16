@@ -83,7 +83,6 @@
     display: flex;
     justify-content: space-between;
     height: 100%;
-
 }
 
 .nav {
@@ -91,6 +90,7 @@
     margin-top: 50px;
     flex-direction: column;
     display: none;
+    z-index: 1;
 
     @include tablet {
         margin-top: 70px;
@@ -104,12 +104,9 @@
 }
 
 .btn__modal {
-    padding: 12px 34px;
-    background-color: getColor(accent);
-    border-radius: 10px;
-    width: 150px;
     margin-top: auto;
     margin-bottom: 60px;
+    z-index: 2;
     
     @include desktop {
         display: none;
@@ -117,13 +114,10 @@
 }
 
 .btn__modal-outside {
-    padding: 12px 34px;
-    background-color: getColor(accent);
-    border-radius: 10px;
-    width: 150px;
     margin-top: auto;
     margin-bottom: auto;
     display: none;
+    z-index: 2;
 
     @include tablet {
         display: block;
@@ -168,12 +162,12 @@
     &:hover,
     &:focus {
         color: getColor(txt-black);
+        transition: color 250ms $animation;
     }
 
     @include tablet {
         font-size: 48px;
         line-height: 59px;
-
     }
 
     @include desktop {
@@ -224,7 +218,10 @@
     }
 }
 
-
+.btn-icon {
+    width: 12px;
+    height: 12px;
+}
 
 
 // hero 
@@ -414,7 +411,7 @@
     height: auto;
     bottom: 0;
     right: 0;
-    z-index: -1;
+    z-index: 0;
     
     @include tablet {
         width: 370px;
