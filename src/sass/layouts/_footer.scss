@@ -6,15 +6,14 @@
 .footer {
    @include tablet() {
       flex-direction: column;
-      // flex-direction: row;
    }
 }
 
 .footer__wrapper {
    margin-right: auto;
    margin-bottom: 42px;
+
    @include tablet() {
-      flex-wrap: wrap;
    }
 
    @include desktop() {
@@ -30,11 +29,14 @@
 
    @include tablet() {
       @include fonts($fw: 700, $fs: 26px, $lh: 32px, $ls: 0.04em);
-      width: 504px;
+      margin-bottom: 9px;
+      width: 352px;
    }
 
    @include desktop() {
       @include fonts($fs: 30px, $lh: 37px, $ls: 0.04em);
+      width: 504px;
+      margin-bottom: 14px;
    }
 }
 
@@ -44,11 +46,12 @@
 
    @include tablet() {
       @include fonts($fw: 700, $fs: 48px, $lh: 59px, $ls: 0.06em);
-      width: 500px;
-   }
+      width: 340px;
+      }
 
    @include desktop() {
       @include fonts($fw: 700, $fs: 58px, $lh: 71px, $ls: 0.06em);
+      width: 501px;
    }
 }
 
@@ -73,11 +76,11 @@
    margin-bottom: 40px;
 
    @include tablet() {
-      width: 285px;
+      width: 300px;
    }
 
    @include desktop() {
-      width: 300px;
+      width: 340px;
    }
 }
 
@@ -107,34 +110,15 @@
    }
 }
 
-.border__mobile {
-   display: block;
-   width: 100%;
-   border-radius: 1px;
-   border: 1px solid #e1e1e1;
-   margin-bottom: 16px;
-
-   @include tablet() {
-      display: block;
-      width: 100%;
-      border-radius: 1px;
-      border: 1px solid #e1e1e1;
-      margin-bottom: 16px;
-   }
-
-   @include desktop() {
-      display: block;
-      width: 100%;
-      border-radius: 1px;
-      border: 1px solid #e1e1e1;
-      margin-bottom: 16px;
-   }
-}
-
 .footer__copyright {
    width: 100%;
+   border-top: 1px solid #e1e1e1;
 
    @include tablet() {
+      width: 100%;
+   }
+   @include desktop() {
+      width: 1176px;
    }
 }
 
@@ -149,7 +133,6 @@
 
    @include tablet() {
       @include fonts($fw: 700, $fs: 14px, $lh: 26.04px, $ls: 0.02em);
-
       width: 300px;
       margin-left: auto;
       margin-right: auto;
