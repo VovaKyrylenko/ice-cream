@@ -123,3 +123,19 @@
 .modal-buy__checkbox--yellow:checked~.modal-buy__check-item--yellow {
    background-color: #EFD478;
 }
+
+@include mobile() {
+   .modal-buy {
+      @include block($w: 280px,
+         $h: auto,
+         $radius: 10px,
+         $border: 2px solid getColor($key: 'accent'),
+         $shadow: 0,
+         $bg: getColor($key: 'txt-white'));
+
+      &__list-check {
+         @include flex($fd: column, $gap: 83px);
+         margin-bottom: 40px;
+      }
+   }
+}

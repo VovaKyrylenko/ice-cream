@@ -62,6 +62,17 @@ refs = {
 };
 modalLoad(refs);
 
+refs = {
+   backdrop: document.querySelector('[data-backdrop]'),
+
+   openModalBtn: document.querySelector('[data-modal-franches-open]'),
+   closeModalBtn: document.querySelector('[data-modal-franches-close]'),
+   modal: document.querySelector('[data-modal-franches]'),
+
+   autofocus: document.querySelector('[data-modal-franches-autofocus]'),
+};
+modalLoad(refs);
+
 // ----------------------------------------------------------------------------------------
 // ------------------------------------ Тут не лізти --------------------------------------
 
