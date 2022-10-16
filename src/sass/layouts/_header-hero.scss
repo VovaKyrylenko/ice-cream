@@ -106,6 +106,8 @@
 .btn__modal {
     margin-top: auto;
     margin-bottom: 60px;
+    margin-top: 32px;
+
     z-index: 2;
     
     @include desktop {
