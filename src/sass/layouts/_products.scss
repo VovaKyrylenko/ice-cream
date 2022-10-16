@@ -1,0 +1,208 @@
+.products__wrapper {
+    @include margin-auto();
+
+    padding: 60px 20px;
+
+    background-image: url(../images/bckg/bcgd@1x.jpg);
+    background-size: contain;
+    overflow: hidden;
+
+    @include tablet {
+        padding-bottom: 82px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @include desktop {
+        padding: 60px 13px 57px 13px;
+    }
+}
+
+.products {
+    text-align: center;
+}
+
+.products {
+    span {
+        @include fonts($fw: 800, $fs: 18px, $lh: 22px);
+        color: getColor("txt-black");
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        @include fonts($ff: Seymour One, $fw: 400, $fs: 30px, $lh: 38px, $ls: 0.04em);
+        color: getColor("txt-black");
+
+        text-transform: uppercase;
+
+        margin-bottom: 148px;
+    }
+}
+
+.products {
+    &__list {
+        @include tablet {
+            display: flex;
+            gap: 16px;
+        }
+        @include desktop {
+            display: flex;
+            gap: 66px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+
+        padding-top: 123px;
+
+        border-radius: 24px;
+
+        background-color: getColor("icecofee-background");
+
+        @include mobile {
+            &:not(:last-child) {
+                margin-bottom: 164px;
+            }
+        }
+        @include desktop {
+            height: 535px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 998;
+            width: 200px;
+            height: 200px;
+
+            overflow: hidden;
+
+            background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #d9d9d9;
+            box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+
+            border-radius: 50%;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -11px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            width: 200px;
+            height: 200px;
+
+            background-image: url(../images/product/img2d@1x.jpg);
+            background-size: cover;
+
+            border-radius: 50%;
+        }
+
+        &:first-child {
+            background-color: getColor("icecream-background");
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 998;
+                width: 200px;
+                height: 200px;
+
+                background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
+                box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+
+                border-radius: 50%;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: -11px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 999;
+                width: 200px;
+                height: 200px;
+
+                background-image: url(../images/product/img1d@1x.jpg);
+                background-size: cover;
+
+                border-radius: 50%;
+            }
+        }
+
+        &:last-child {
+            background-color: getColor("milkshakes-background");
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 998;
+                width: 200px;
+                height: 200px;
+
+                background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #d9d9d9;
+                box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+
+                border-radius: 50%;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: -11px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 999;
+                width: 200px;
+                height: 200px;
+
+                background-image: url(../images/product/img3d@1x.jpg);
+                background-size: cover;
+
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__name {
+        @include fonts($fw: 700, $fs: 20px, $lh: 24px, $ls: 0.04em);
+        text-transform: uppercase;
+        color: getColor("txt-black");
+
+        margin-bottom: 40px;
+    }
+
+    &__description {
+        @include fonts($lh: 24.64px, $ls: 0.04em);
+        color: getColor("txt-black");
+
+        @include margin-auto();
+        width: 200px;
+        margin-bottom: 40px;
+    }
+}
+
+.btn__products-icon {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    cursor: pointer;
+
+    @include desktop {
+        bottom: 52px;
+    }
+}
