@@ -4,28 +4,22 @@
     padding: 60px 20px;
 
     background-image: url(../images/bckg/bcgd@1x.jpg);
-    background-size: cover;
+    background-size: contain;
+    overflow: hidden;
+
+    @include tablet {
+        padding-bottom: 82px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @include desktop {
+        padding: 60px 13px 57px 13px;
+    }
 }
 
 .products {
     text-align: center;
-
-    @mixin mobile() {
-        @media (max-width: 767px) {
-            @content;
-        }
-    }
-    @mixin tablet() {
-        @media (min-width: 768px) and (max-width: 1199px) {
-            @content;
-        }
-    }
-
-    @mixin desktop() {
-        @media (min-width: 1200px) {
-            @content;
-        }
-    }
 }
 
 .products {
@@ -33,6 +27,8 @@
         @include fonts($fw: 800, $fs: 18px, $lh: 22px);
         color: getColor("txt-black");
         text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 12px;
     }
 
     &__title {
@@ -60,12 +56,21 @@
     &__item {
         position: relative;
         width: 100%;
-        margin-bottom: 164px;
+
         padding-top: 123px;
 
         border-radius: 24px;
 
         background-color: getColor("icecofee-background");
+
+        @include mobile {
+            &:not(:last-child) {
+                margin-bottom: 164px;
+            }
+        }
+        @include desktop {
+            height: 535px;
+        }
 
         &::before {
             content: "";
@@ -86,6 +91,7 @@
         }
         &::after {
             content: "";
+            display: block;
             position: absolute;
             top: -11px;
             left: 50%;
@@ -188,6 +194,15 @@
     }
 }
 
-.btn__products {
-    background-image: url();
+.btn__products-icon {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    cursor: pointer;
+
+    @include desktop {
+        bottom: 52px;
+    }
 }
