@@ -232,9 +232,8 @@
     @include margin-auto;
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 62px 20px 0;
     position: relative;
-    padding-top: 62px;
 
     background-image: url(../images/header/points__m.png);  
     background-repeat: no-repeat;
@@ -251,7 +250,6 @@
     @include desktop {
         flex-direction: row;
         padding-top: 28px;
-        padding: 0;
 
         background-image: url(../images/header/points__d.png);
     }
