@@ -1,0 +1,29 @@
+.advantages {}
+
+//  {
+//     padding: 0 45px;
+//     outline: 1px tomato solid;
+// }
+
+.advantages__box {
+    @extend .circle;
+    border-color: getColor(accent);
+}
+
+.advantages__list {}
+
+.advantages__item:not(:last-child) {
+    margin-bottom: 28px;
+}
+
+.advantages__icon {
+    margin-bottom: 16px;
+    fill: getColor(txt-black);
+    
+}
+
+.advantages__text {}
+
+.advantages__info {
+    margin-bottom: 18px;
+}
