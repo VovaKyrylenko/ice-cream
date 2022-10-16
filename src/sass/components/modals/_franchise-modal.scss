@@ -6,6 +6,7 @@
    background-color: getColor('txt-white');
    border-radius: 10px;
    padding: 28px 30px 28px 29px;
+   border: 2px solid #F8D24E;
 
    @include desktop {
       max-width: 568px;
