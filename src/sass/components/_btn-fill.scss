@@ -13,6 +13,8 @@
    background-color: getColor(btn-default);
    border: 2px solid transparent;
    border-radius: 10px;
+   @include animation(color);
+   @include animation(background-color);
 
    &:hover {
       background-color: getColor(btn-hover);
@@ -30,7 +32,7 @@
 // кнопка "Buy now"
 // десктопна, планшетна і мобільна версія
 .buy-now-btn {
-   display: block;
+   display: flex;
    width: 152px;
    height: 42px;
 
@@ -41,6 +43,8 @@
    background-color: getColor(btn-default);
    border: 2px solid transparent;
    border-radius: 10px;
+   @include animation(color);
+   @include animation(background-color);
 
    &:hover {
       background-color: getColor(btn-hover);
@@ -58,7 +62,7 @@
 // кнопка "Our Locations"
 // десктопна, планшетна і мобільна версія
 .our-locations-btn {
-   display: block;
+   display: flex;
    width: 196px;
    height: 42px;
 
@@ -69,6 +73,8 @@
    background-color: getColor(btn-default);
    border: 2px solid transparent;
    border-radius: 10px;
+   @include animation(color);
+   @include animation(background-color);
 
    &:hover {
       background-color: getColor(btn-hover);
@@ -96,6 +102,8 @@
    background-color: getColor(btn-default);
    border: 2px solid transparent;
    border-radius: 10px;
+   @include animation(color);
+   @include animation(background-color);
 
    // десктопна, планшетна версія
    @media screen and (min-width: 480px) {
