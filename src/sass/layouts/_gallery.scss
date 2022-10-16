@@ -1,12 +1,17 @@
 .gallery {
   margin-top: -24px;
-  
+
   @include tablet() {
     margin-top: -164px;
   }
+
   @include desktop () {
     margin-top: -94px;
+    margin-bottom: -163px;
+    position: relative;
+    z-index: 999;
   }
+
   // &-item {
   //   margin-left: 20px;
   //   margin-right: 20px;
@@ -22,27 +27,25 @@
   //       }
 
   &-img {
-    
-      width: 280px;  
-      height: 130px;   
-      border-radius: 7.41px;
-      margin: 0 auto;
-            
-      
-      @include tablet() {
-        width: 704px;  
-        height: 320px;   
-        border-radius: 18px;
-        }
-        @include desktop () {
-            width: 1013px;  
-            height: 422px;   
-            border-radius: 24px;
-            }
-      }      
+
+    width: 280px;
+    height: 130px;
+    border-radius: 7.41px;
+    margin: 0 auto;
+    object-fit: cover;
+
+
+    @include tablet() {
+      width: 704px;
+      height: 320px;
+      border-radius: 18px;
+    }
+
+    @include desktop () {
+      width: 1013px;
+      height: 422px;
+      border-radius: 24px;
+    }
+  }
 
 }
-
-
- 
- 
