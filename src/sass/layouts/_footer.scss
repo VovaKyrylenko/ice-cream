@@ -5,7 +5,8 @@
 
 .footer {
    @include tablet() {
-      display: flex;
+      flex-direction: column;
+      // flex-direction: row;
    }
 }
 
@@ -13,8 +14,11 @@
    margin-right: auto;
    margin-bottom: 42px;
    @include tablet() {
-      display: flex;
       flex-wrap: wrap;
+   }
+
+   @include desktop() {
+      width: 504px;
    }
 }
 
@@ -58,7 +62,6 @@
    gap: 20px;
 
    @include tablet() {
-
    }
 }
 
@@ -68,6 +71,14 @@
    width: 244px;
    margin-left: auto;
    margin-bottom: 40px;
+
+   @include tablet() {
+      width: 285px;
+   }
+
+   @include desktop() {
+      width: 300px;
+   }
 }
 
 .footer__address-subtitle {
@@ -122,6 +133,9 @@
 
 .footer__copyright {
    width: 100%;
+
+   @include tablet() {
+   }
 }
 
 .footer__copyright-subtitle {
@@ -135,6 +149,7 @@
 
    @include tablet() {
       @include fonts($fw: 700, $fs: 14px, $lh: 26.04px, $ls: 0.02em);
+
       width: 300px;
       margin-left: auto;
       margin-right: auto;
@@ -142,5 +157,6 @@
 
    @include desktop() {
       @include fonts($fw: 700, $fs: 12px, $lh: 22.32px, $ls: 0.02em);
+      width: 255px;
    }
 }
