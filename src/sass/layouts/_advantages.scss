@@ -8,6 +8,8 @@
 .advantages__box {
     @extend .circle;
     border-color: getColor(accent);
+    width: 50px;
+    height: 50px;
 }
 
 .advantages__list {}
@@ -22,7 +24,9 @@
 
 }
 
-.advantages__text {}
+.advantages__text {
+    @include fonts()
+}
 
 .advantages__info {
     margin-bottom: 18px;
