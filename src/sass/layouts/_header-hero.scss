@@ -17,13 +17,13 @@
         background-color: getColor('background');
     }
 
-    & .btn__modal {
+    & .hero__btn__modal {
         @include tablet {
             display: none;
         }
     }
 
-    & .btn__modal-outside {
+    & .hero__btn__modal-outside {
         display: none;
     }
 
@@ -103,7 +103,7 @@
     }
 }
 
-.btn__modal {
+.hero__btn__modal {
     margin-top: auto;
     margin-bottom: 60px;
     margin-top: 32px;
@@ -115,7 +115,7 @@
     }
 }
 
-.btn__modal-outside {
+.hero__btn__modal-outside {
     margin-top: auto;
     margin-bottom: auto;
     display: none;
