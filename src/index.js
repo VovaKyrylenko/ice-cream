@@ -47,3 +47,48 @@ $('.customer').slick({
       }
    }, 100);
 })();
+
+let refs;
+// ----------------------------------------------------------------------------------------
+// ---------------------------------------- Модалки + приклад -----------------------------
+refs = {
+   backdrop: document.querySelector('[data-backdrop]'),
+
+   openModalBtn: document.querySelector('[data-modal-franches-open]'),
+   closeModalBtn: document.querySelector('[data-modal-franches-close]'),
+   modal: document.querySelector('[data-modal-franches]'),
+
+   autofocus: document.querySelector('[data-modal-franches-autofocus]'),
+};
+modalLoad(refs);
+
+// ----------------------------------------------------------------------------------------
+// ------------------------------------ Тут не лізти --------------------------------------
+
+function modalLoad(refs) {
+   refs.modal.style.display = 'none';
+
+   refs.openModalBtn.addEventListener('click', () => toggleModal(true));
+   refs.closeModalBtn.addEventListener('click', () => toggleModal(false));
+
+   function toggleModal(value) {
+      refs.backdrop.classList.toggle('visually-hidden');
+      if (value) {
+         refs.modal.style.display = 'block';
+         if (refs.autofocus != null) refs.autofocus.focus();
+      } else refs.modal.style.display = 'none';
+   }
+}
+
+// (() => {
+//    const refs = {
+//       checkBox: document.querySelector('[data-policy]'),
+//       submitBtn: document.querySelector('[data-submit-btn]'),
+//    };
+
+//    refs.checkBox.addEventListener('change', toggleAttr);
+
+//    function toggleAttr() {
+//       refs.submitBtn.toggleAttribute('disabled');
+//    }
+// })();
