@@ -163,7 +163,7 @@
 
     &:hover,
     &:focus {
-        color: getColor(txt-black);
+        color: getColor(accent);
         transition: color 250ms $animation;
     }
 
@@ -232,9 +232,8 @@
     @include margin-auto;
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 62px 20px 0;
     position: relative;
-    margin-top: 62px;
 
     background-image: url(../images/header/points__m.png);  
     background-repeat: no-repeat;
@@ -243,15 +242,14 @@
         
     @include tablet {
         flex-direction: row;
-        margin-top: 28px;        
+        padding-top: 28px;        
 
         background-image: url(../images/header/points__t.png);
     }
 
     @include desktop {
         flex-direction: row;
-        margin-top: 28px;
-        padding: 0;
+        padding-top: 28px;
 
         background-image: url(../images/header/points__d.png);
     }
