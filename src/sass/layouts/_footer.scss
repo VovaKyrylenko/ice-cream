@@ -4,8 +4,35 @@
 }
 
 .footer {
+   padding-bottom: 62px;
+
    @include tablet() {
+      padding-bottom: 13px;
+
+      & .container {
+         display: flex;
+         align-items: center;
+      }
+   }
+   @include desktop() {
+      padding-bottom: 8px;
+
+      & .container {
+         display: flex;
+      }
+   }
+}
+.footer__wrapper-group {
+   margin-right: 20px;
+
+   @include tablet() {
+      display: flex;
       flex-direction: column;
+      justify-content: flex-end;
+   }
+
+   @include tablet() {
+      margin-top: 68px;
    }
 }
 
@@ -14,9 +41,11 @@
    margin-bottom: 42px;
 
    @include tablet() {
+      margin-bottom: 32px;
    }
 
    @include desktop() {
+      margin-bottom: 54px;
       width: 504px;
    }
 }
@@ -47,16 +76,24 @@
    @include tablet() {
       @include fonts($fw: 700, $fs: 48px, $lh: 59px, $ls: 0.06em);
       width: 340px;
-      }
+   }
 
    @include desktop() {
       @include fonts($fw: 700, $fs: 58px, $lh: 71px, $ls: 0.06em);
-      width: 501px;
+      width: 504px;
    }
 }
 
 .footer__wrapper-socials {
    margin-bottom: 38px;
+
+   @include tablet() {
+      margin-bottom: 32px;
+   }
+
+   @include desktop() {
+      margin-bottom: 40px;
+   }
 }
 
 .footer__wrapper-list {
@@ -77,9 +114,11 @@
 
    @include tablet() {
       width: 300px;
+      margin-bottom: 56px;
    }
 
    @include desktop() {
+      margin-bottom: 60px;
       width: 340px;
    }
 }
@@ -125,6 +164,7 @@
 .footer__copyright-subtitle {
    width: 150px;
    text-align: center;
+   margin-top: 16px;
    margin-left: auto;
    margin-right: auto;
 
@@ -134,12 +174,14 @@
    @include tablet() {
       @include fonts($fw: 700, $fs: 14px, $lh: 26.04px, $ls: 0.02em);
       width: 300px;
+      margin-top: 14px;
       margin-left: auto;
       margin-right: auto;
    }
 
    @include desktop() {
       @include fonts($fw: 700, $fs: 12px, $lh: 22.32px, $ls: 0.02em);
+      margin-top: 12px;
       width: 255px;
    }
 }
