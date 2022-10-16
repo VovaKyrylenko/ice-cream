@@ -12,18 +12,22 @@
 
         visibility: visible;
         pointer-events: all;
-        overflow: scroll;   
+        overflow: scroll;
         z-index: 1;
         background-color: getColor('background');
     }
 
-    & .btn__modal {
-        @include tablet {
+    & .hero__btn__modal {
+        @include tablet() {
+            display: none;
+        }
+
+        @include desktop() {
             display: none;
         }
     }
 
-    & .btn__modal-outside {
+    & .hero__btn__modal-outside {
         display: none;
     }
 
@@ -44,7 +48,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-    
+
     @include tablet {
         padding-top: 20px;
         flex-direction: row;
@@ -103,19 +107,19 @@
     }
 }
 
-.btn__modal {
+.hero__btn__modal {
     margin-top: auto;
     margin-bottom: 60px;
     margin-top: 32px;
 
     z-index: 2;
-    
+
     @include desktop {
         display: none;
     }
 }
 
-.btn__modal-outside {
+.hero__btn__modal-outside {
     margin-top: auto;
     margin-bottom: auto;
     display: none;
@@ -163,7 +167,7 @@
 
     &:hover,
     &:focus {
-        color: getColor(txt-black);
+        color: getColor(accent);
         transition: color 250ms $animation;
     }
 
@@ -207,6 +211,7 @@
     &.is-open .svg-open {
         display: none;
     }
+
     &.is-open .svg-close {
         display: block;
     }
@@ -232,26 +237,24 @@
     @include margin-auto;
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 62px 20px 0;
     position: relative;
-    margin-top: 62px;
 
-    background-image: url(../images/header/points__m.png);  
+    background-image: url(../images/header/points__m.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
-        
+
     @include tablet {
         flex-direction: row;
-        margin-top: 28px;        
+        padding-top: 28px;
 
         background-image: url(../images/header/points__t.png);
     }
 
     @include desktop {
         flex-direction: row;
-        margin-top: 28px;
-        padding: 0;
+        padding-top: 28px;
 
         background-image: url(../images/header/points__d.png);
     }
@@ -281,7 +284,7 @@
 .hero__title {
     @include fonts ($ff: Seymour One, $fs: 26px, $lh: 33px, $ls: 0.04em);
     text-transform: uppercase;
-    
+
     & span {
         font-size: 34px;
     }
@@ -291,6 +294,7 @@
 
         font-size: 18px;
         line-height: 23px;
+
         & span {
             font-size: 24px;
         }
@@ -396,9 +400,7 @@
         display: none;
     }
 
-    @include tablet {
-
-    }
+    @include tablet {}
 }
 
 .hero__company-info {
@@ -414,15 +416,14 @@
     bottom: 0;
     right: 0;
     z-index: 0;
-    
+
     @include tablet {
         width: 370px;
         position: absolute;
     }
-    
+
     @include desktop {
         position: absolute;
         width: 620px;
     }
 }
-

@@ -20,6 +20,7 @@ body {
 .container {
    width: $mobile;
    padding: 0 20px;
+   @include margin-auto();
 
    @include tablet() {
       width: $tablet;

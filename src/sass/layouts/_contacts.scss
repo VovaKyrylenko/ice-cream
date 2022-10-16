@@ -1,6 +1,7 @@
 .contacts {
-   margin-left: auto;
-   margin-right: auto;
+   margin-top: -96px;
+   position: relative;
+   z-index: 999;
 }
 
 .contacts__list {
@@ -16,6 +17,7 @@
       justify-content: center;
       margin-bottom: 60px;
    }
+
    @media screen and(min-width:1200px) {
       gap: 32px;
       margin-bottom: 62px;
@@ -23,6 +25,7 @@
 }
 
 .contacts__item {
+   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
    background-color: #ffffff;
    padding: 40px 32px;
    border-radius: 24px;
@@ -33,6 +36,7 @@
       width: 224px;
       // width: calc((100% - 32px) / 3);
    }
+
    @media screen and(min-width:1200px) {
       padding: 40px 40px;
       width: 368px;
@@ -50,6 +54,7 @@
       padding-bottom: 32px;
    }
 }
+
 .contacts__place {
    display: inline-block;
    @include fonts($fw: 500, $fs: 14px, $lh: 22px, $ls: 0.04em);
@@ -63,6 +68,7 @@
       @include fonts($fw: 500, $fs: 16px, $lh: 30px, $ls: 0.04em);
       margin-bottom: 30px;
    }
+
    @media screen and(min-width:1200px) {
       margin-bottom: 32px;
    }
@@ -76,10 +82,12 @@
    @media screen and(min-width:768px) {
       @include fonts($fw: 500, $fs: 14px, $lh: 26px, $ls: 0.04em);
    }
+
    @media screen and(min-width:1200px) {
       @include fonts($fw: 500, $fs: 16px, $lh: 30px, $ls: 0.04em);
    }
 }
+
 .contacts__link {
    display: inline-block;
    color: #d6936d;
@@ -88,6 +96,7 @@
    @media screen and(min-width:768px) {
       @include fonts($fw: 500, $fs: 14px, $lh: 26px, $ls: 0.04em);
    }
+
    @media screen and(min-width:1200px) {
       font-size: 16px;
       line-height: 29px;
@@ -116,6 +125,7 @@
    @media screen and(min-width:768px) {
       @include fonts($fw: 500, $fs: 14px, $lh: 26px);
    }
+
    @media screen and(min-width:1200px) {
       @include fonts($fw: 500, $fs: 16px, $lh: 30px);
    }
@@ -129,6 +139,7 @@
    @media screen and(min-width:768px) {
       @include fonts($fw: 500, $fs: 14px, $lh: 26px);
    }
+
    @media screen and(min-width:1200px) {
       @include fonts($fw: 500, $fs: 16px, $lh: 30px);
    }
@@ -142,6 +153,7 @@
    @media screen and(min-width:768px) {
       @include fonts($fw: 500, $fs: 14px, $lh: 26px);
    }
+
    @media screen and(min-width:1200px) {
       @include fonts($fw: 500, $fs: 16px, $lh: 29px);
    }
@@ -177,10 +189,12 @@
    &:hover {
       background-color: getColor(btn-hover);
    }
+
    &:focus {
       color: getColor(txt-white);
       background-color: getColor(btn-focus);
    }
+
    &:disabled {
       background-color: getColor(btn-disabled);
    }
@@ -207,10 +221,12 @@
    &:hover {
       border: 2px solid getColor(btn-hover);
    }
+
    &:focus {
       color: getColor(txt-white);
       border: 2px solid getColor(btn-focus);
    }
+
    &:disabled {
       border: 2px solid getColor(btn-disabled);
    }
