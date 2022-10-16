@@ -1,33 +1,106 @@
-.advantages {}
+    .advantages {
+        padding-bottom: 180px;
+    }
 
-//  {
-//     padding: 0 45px;
-//     outline: 1px tomato solid;
-// }
 
-.advantages__box {
-    @extend .circle;
-    border-color: getColor(accent);
-    width: 50px;
-    height: 50px;
-}
+    .advantages__box {
+        @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+        @include flex();
+    }
 
-.advantages__list {}
+    .advantages__list {
+        @include flex($gap: 80px);
+    }
 
-.advantages__item:not(:last-child) {
-    margin-bottom: 28px;
-}
+    .advantages__item {
+        @include flex($fd: column, $gap: 16px);
+        width: calc((100% - 32px * 2) / 3);
+    }
 
-.advantages__icon {
-    margin-bottom: 16px;
-    fill: getColor(txt-black);
+    .advantages__icon {
+        width: 36px;
+        height: 36px;
+    }
 
-}
+    .advantages__text {
+        @include fonts($fs: 16px, $lh: 28px);
+        text-align: center;
+        width: 266px;
+    }
 
-.advantages__text {
-    @include fonts()
-}
+    .advantages__info {
+        @include fonts($fw: 700, $fs: 58px, $lh: 71px);
+    }
 
-.advantages__info {
-    margin-bottom: 18px;
-}
+    @include tablet() {
+        .advantages {
+            padding-bottom: 180px;
+        }
+
+
+        .advantages__box {
+            @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+            @include flex();
+            margin-bottom: 16px;
+        }
+
+        .advantages__list {
+            @include flex($gap: 80px);
+        }
+
+        .advantages__item {
+            @include flex($fd: column, $gap: 16px);
+            width: calc((100% - 80px * 2) / 3);
+        }
+
+        .advantages__icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .advantages__text {
+            @include fonts($fs: 16px, $lh: 28px);
+            text-align: center;
+        }
+
+        .advantages__info {
+            @include fonts($fw: 700, $fs: 58px, $lh: 71px);
+        }
+    }
+
+    @include desktop() {
+        .advantages {
+            padding-bottom: 180px;
+        }
+
+
+        .advantages__box {
+            @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+            @include flex();
+            margin-bottom: 24px;
+        }
+
+        .advantages__list {
+            @include flex();
+        }
+
+        .advantages__item {
+            @include flex($fd: column, $gap: 16px);
+            width: calc((100% - 32px * 2) / 3);
+        }
+
+        .advantages__icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .advantages__text {
+            @include fonts($fs: 16px, $lh: 28px);
+            text-align: center;
+            width: 266px;
+        }
+
+        .advantages__info {
+            @include fonts($fw: 700, $fs: 58px, $lh: 71px);
+        }
+    }

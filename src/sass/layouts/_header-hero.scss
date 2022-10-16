@@ -12,13 +12,17 @@
 
         visibility: visible;
         pointer-events: all;
-        overflow: scroll;   
+        overflow: scroll;
         z-index: 1;
         background-color: getColor('background');
     }
 
     & .hero__btn__modal {
-        @include tablet {
+        @include tablet() {
+            display: none;
+        }
+
+        @include desktop() {
             display: none;
         }
     }
@@ -44,7 +48,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-    
+
     @include tablet {
         padding-top: 20px;
         flex-direction: row;
@@ -109,7 +113,7 @@
     margin-top: 32px;
 
     z-index: 2;
-    
+
     @include desktop {
         display: none;
     }
@@ -207,6 +211,7 @@
     &.is-open .svg-open {
         display: none;
     }
+
     &.is-open .svg-close {
         display: block;
     }
@@ -235,14 +240,14 @@
     padding: 62px 20px 0;
     position: relative;
 
-    background-image: url(../images/header/points__m.png);  
+    background-image: url(../images/header/points__m.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
-        
+
     @include tablet {
         flex-direction: row;
-        padding-top: 28px;        
+        padding-top: 28px;
 
         background-image: url(../images/header/points__t.png);
     }
@@ -279,7 +284,7 @@
 .hero__title {
     @include fonts ($ff: Seymour One, $fs: 26px, $lh: 33px, $ls: 0.04em);
     text-transform: uppercase;
-    
+
     & span {
         font-size: 34px;
     }
@@ -289,6 +294,7 @@
 
         font-size: 18px;
         line-height: 23px;
+
         & span {
             font-size: 24px;
         }
@@ -394,9 +400,7 @@
         display: none;
     }
 
-    @include tablet {
-
-    }
+    @include tablet {}
 }
 
 .hero__company-info {
@@ -412,15 +416,14 @@
     bottom: 0;
     right: 0;
     z-index: 0;
-    
+
     @include tablet {
         width: 370px;
         position: absolute;
     }
-    
+
     @include desktop {
         position: absolute;
         width: 620px;
     }
 }
-
