@@ -250,3 +250,31 @@
         bottom: 52px;
     }
 }
+
+.btn__products-icon--default {
+    display: block;
+}
+.btn__products-icon--hover {
+    display: none;
+}
+.btn__products-icon--focus {
+    display: none;
+}
+
+.products__btn:hover {
+    .btn__products-icon--default {
+        display: none;
+    }
+    .btn__products-icon--hover {
+        display: block;
+    }
+}
+
+.products__btn:focus {
+    .btn__products-icon--default {
+        display: none;
+    }
+    .btn__products-icon--focus {
+        display: block;
+    }
+}
