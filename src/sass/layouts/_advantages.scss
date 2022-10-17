@@ -1,7 +1,6 @@
     .advantages {
-        padding-bottom: 180px;
+        padding-bottom: 60px;
     }
-
 
     .advantages__box {
         @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
@@ -10,6 +9,11 @@
 
     .advantages__list {
         @include flex($gap: 80px);
+
+        @include mobile() {
+            flex-direction: column;
+            gap: 27px;
+        }
     }
 
     .advantages__item {
@@ -34,7 +38,7 @@
 
     @include tablet() {
         .advantages {
-            padding-bottom: 180px;
+            padding-bottom: 204px;
         }
 
 
