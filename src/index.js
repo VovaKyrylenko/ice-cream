@@ -51,16 +51,27 @@ $('.customer').slick({
 let refs;
 // ----------------------------------------------------------------------------------------
 // ---------------------------------------- Модалки + приклад -----------------------------
-// refs = {
-//    backdrop: document.querySelector('[data-backdrop]'),
+refs = {
+   backdrop: document.querySelector('[data-backdrop]'),
 
-//    openModalBtn: document.querySelector('[data-modal-franches-open]'),
-//    closeModalBtn: document.querySelector('[data-modal-franches-close]'),
-//    modal: document.querySelector('[data-modal-franches]'),
+   openModalBtn: document.querySelector('[data-modal-franches-open]'),
+   closeModalBtn: document.querySelector('[data-modal-franches-close]'),
+   modal: document.querySelector('[data-modal-franches]'),
 
-//    autofocus: document.querySelector('[data-modal-franches-autofocus]'),
-// };
-// modalLoad(refs);
+   autofocus: document.querySelector('[data-modal-franches-autofocus]'),
+};
+modalLoad(refs);
+
+refs = {
+   backdrop: document.querySelector('[data-backdrop]'),
+
+   openModalBtn: document.querySelector('[data-modal-buy-now-open]'),
+   closeModalBtn: document.querySelector('[data-modal-buy-now-close]'),
+   modal: document.querySelector('[data-modal-buy-now]'),
+
+   autofocus: document.querySelector('[data-modal-buy-now-autofocus]'),
+};
+modalLoad(refs);
 
 // ----------------------------------------------------------------------------------------
 // ------------------------------------ Тут не лізти --------------------------------------
