@@ -1,0 +1,95 @@
+<div class="modal-buy">
+   <button class="modal-btn" type="button">
+      <svg width="20" height="20">
+         <use href="./images/icons.svg#icon-menu-close"></use>
+      </svg>
+   </button>
+   <span class="modal-title modal-title--buy">Buy now</span>
+   <ul class="modal-buy__list-check">
+      <input type="checkbox" id="icecream" class="modal-buy__checkbox modal-buy__checkbox--green" hidden>
+      <li class="modal-buy__check-item modal-buy__check-item--green">
+         <label for="icecream">
+            <div class="modal-buy__wrapper">
+               <div class="modal-buy__image-element modal-buy__image-element--green"></div>
+               <picture>
+                  <source
+                     srcset="./images/product_modal_buy_now/img1m@1x.webp 1x, ./images/product_modal_buy_now/img1m@2x.webp 2x"
+                     type="image/webp">
+                  <source
+                     srcset="./images/product_modal_buy_now/img1m@1x.jpg 1x, ./images/product_modal_buy_now/img1m@2x.jpg 2x"
+                     type="image/jpg">
+                  <source media="(min-width: 768px)"
+                     srcset="./images/product_modal_buy_now/img1d@1x.webp 1x, ./images/product_modal_buy_now/img1d@2x.webp 2x"
+                     type="image/webp">
+                  <source media="(min-width: 768px)"
+                     srcset="./images/product_modal_buy_now/img1d@1x.jpg 1x, ./images/product_modal_buy_now/img1d@2x.jpg 2x"
+                     type="image/jpg">
+                  <img src="./images/product_modal_buy_now/img1m@2x.webp" alt="" class="modal-buy__image">
+               </picture>
+            </div>
+            <span class="modal-buy__item-span">ice cream</span>
+         </label>
+      </li>
+      <input type="checkbox" id="icecoffee" class="modal-buy__checkbox modal-buy__checkbox--yellow" hidden>
+      <li class="modal-buy__check-item modal-buy__check-item--yellow">
+         <label for="icecoffee">
+            <div class="modal-buy__wrapper">
+               <div class="modal-buy__image-element modal-buy__image-element--yellow"></div>
+               <picture>
+                  <source
+                     srcset="./images/product_modal_buy_now/img2m@1x.webp 1x, ./images/product_modal_buy_now/img2m@2x.webp 2x"
+                     type="image/webp">
+                  <source
+                     srcset="./images/product_modal_buy_now/img2m@1x.jpg 1x, ./images/product_modal_buy_now/img2m@2x.jpg 2x"
+                     type="image/jpg">
+                  <source media="(min-width: 768px)"
+                     srcset="./images/product_modal_buy_now/img2d@1x.webp 1x, ./images/product_modal_buy_now/img2d@2x.webp 2x"
+                     type="image/webp">
+                  <source media="(min-width: 768px)"
+                     srcset="./images/product_modal_buy_now/img2d@1x.jpg 1x, ./images/product_modal_buy_now/img2d@2x.jpg 2x"
+                     type="image/jpg">
+                  <img src="./images/product_modal_buy_now/img2m@2x.webp" alt="" class="modal-buy__image">
+               </picture>
+            </div>
+            <span class="modal-buy__item-span">ice coffee</span>
+         </label>
+      </li>
+      <input type="checkbox" id="milkshake" class="modal-buy__checkbox modal-buy__checkbox--brown" hidden>
+      <li class="modal-buy__check-item modal-buy__check-item--brown">
+         <label for="milkshake">
+            <div class="modal-buy__wrapper">
+               <div class="modal-buy__image-element modal-buy__image-element--brown"></div>
+               <picture>
+                  <source
+                     srcset="./images/product_modal_buy_now/img3m@1x.webp 1x, ./images/product_modal_buy_now/img3m@2x.webp 2x"
+                     type="image/webp">
+                  <source
+                     srcset="./images/product_modal_buy_now/img3m@1x.jpg 1x, ./images/product_modal_buy_now/img3m@2x.jpg 2x"
+                     type="image/jpg">
+                  <source media="(min-width: 768px)"
+                     srcset="./images/product_modal_buy_now/img3d@1x.webp 1x, ./images/product_modal_buy_now/img3d@2x.webp 2x"
+                     type="image/webp">
+                  <source media="(min-width: 768px)"
+                     srcset="./images/product_modal_buy_now/img3d@1x.jpg 1x, ./images/product_modal_buy_now/img3d@2x.jpg 2x"
+                     type="image/jpg">
+                  <img src="./images/product_modal_buy_now/img3m@2x.webp" alt="" class="modal-buy__image">
+               </picture>
+            </div>
+            <span class="modal-buy__item-span">milkshake</span>
+         </label>
+      </li>
+   </ul>
+   <form action="" class="modal-buy__form">
+      <label for="" class="modal-ingridients__label">
+         <input type="text" class="modal-ingridients__input" placeholder="Name" required>
+      </label>
+      <label for="" class="modal-ingridients__label">
+         <input type="tel" class="modal-ingridients__input" placeholder="Phone" required>
+      </label>
+      <label for="" class="modal-ingridients__label">
+         <textarea type="text" class="modal-ingridients__input modal-ingridients__textarea modal-buy__textarea"
+            placeholder="Comment"></textarea>
+      </label>
+      <button type="submit" class="submit-btn">Submit</button>
+   </form>
+</div>
