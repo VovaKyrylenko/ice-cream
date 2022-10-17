@@ -1,7 +1,16 @@
 .contacts {
-   margin-top: -96px;
    position: relative;
    z-index: 999;
+   padding-bottom: 20px;
+   margin-top: -345px;
+
+   @media screen and(min-width:768px) {
+      margin-top: -304px;
+   }
+
+   @media screen and(min-width:1200px) {
+      margin-top: -96px;
+   }
 }
 
 .contacts__list {
@@ -45,20 +54,21 @@
 }
 
 .contacts__div {
-   padding-bottom: 24px;
-   border-bottom: 1px solid #e1e1e1;
+   padding-bottom: 11px;
+
    margin-bottom: 24px;
+   border-bottom: 1px solid #e1e1e1;
 
    @media screen and(min-width:768px) {
-      margin-bottom: 32px;
-      padding-bottom: 32px;
+      margin-bottom: 26px;
+      padding-bottom: 22px;
    }
 }
 
 .contacts__place {
    display: inline-block;
-   @include fonts($fw: 500, $fs: 14px, $lh: 22px, $ls: 0.04em);
-   padding: 2px 10px;
+   @include fonts($fw: 500, $fs: 12px, $lh: 22px, $ls: 0.04em);
+   padding: 0 10px;
    border-radius: 4px;
    color: #131313;
    background-color: #f8d24e;
@@ -66,25 +76,23 @@
 
    @media screen and(min-width:768px) {
       @include fonts($fw: 500, $fs: 16px, $lh: 30px, $ls: 0.04em);
-      margin-bottom: 30px;
-   }
-
-   @media screen and(min-width:1200px) {
       margin-bottom: 32px;
    }
 }
 
 .contacts__town {
-   margin-bottom: 20px;
+   margin-bottom: 8px;
    color: #131313;
    @include fonts($fw: 500, $fs: 12px, $lh: 22px, $ls: 0.04em);
 
    @media screen and(min-width:768px) {
       @include fonts($fw: 500, $fs: 14px, $lh: 26px, $ls: 0.04em);
+      margin-bottom: 12px;
    }
 
    @media screen and(min-width:1200px) {
       @include fonts($fw: 500, $fs: 16px, $lh: 30px, $ls: 0.04em);
+      margin-bottom: 8px;
    }
 }
 
@@ -98,11 +106,11 @@
    }
 
    @media screen and(min-width:1200px) {
-      font-size: 16px;
-      line-height: 29px;
+      @include fonts($fw: 500, $fs: 16px, $lh: 29px, $ls: 0.04em);
    }
 
-   &:hover {
+   &:hover,
+   &:focus {
       text-decoration: underline;
    }
 }
@@ -132,7 +140,6 @@
 }
 
 .timetable__time {
-   margin-bottom: 8px;
    color: #ababab;
    @include fonts($fw: 500, $fs: 12px, $lh: 22px);
 
@@ -143,6 +150,10 @@
    @media screen and(min-width:1200px) {
       @include fonts($fw: 500, $fs: 16px, $lh: 30px);
    }
+}
+
+.timetable__item:not(:last-child) {
+   margin-bottom: 8px;
 }
 
 .connect__link {
@@ -186,6 +197,9 @@
    border: 2px solid transparent;
    border-radius: 10px;
 
+   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
    &:hover {
       background-color: getColor(btn-hover);
    }
@@ -217,6 +231,9 @@
    color: #000000;
    border: 2px solid getColor(accent);
    border-radius: 10px;
+
+   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
    &:hover {
       border: 2px solid getColor(btn-hover);
