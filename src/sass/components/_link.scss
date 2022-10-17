@@ -6,6 +6,7 @@
    font-style: normal;
    text-decoration: underline;
    color: getColor(accent);
+   @include animation(color);
 
    // десктопна версія
    @media screen and (min-width: 1200px) {
