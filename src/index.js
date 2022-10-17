@@ -51,16 +51,16 @@ $('.customer').slick({
 let refs;
 // ----------------------------------------------------------------------------------------
 // ---------------------------------------- Модалки + приклад -----------------------------
-refs = {
-   backdrop: document.querySelector('[data-backdrop]'),
+// refs = {
+//    backdrop: document.querySelector('[data-backdrop]'),
 
-   openModalBtn: document.querySelector('[data-modal-franches-open]'),
-   closeModalBtn: document.querySelector('[data-modal-franches-close]'),
-   modal: document.querySelector('[data-modal-franches]'),
+//    openModalBtn: document.querySelector('[data-modal-franches-open]'),
+//    closeModalBtn: document.querySelector('[data-modal-franches-close]'),
+//    modal: document.querySelector('[data-modal-franches]'),
 
-   autofocus: document.querySelector('[data-modal-franches-autofocus]'),
-};
-modalLoad(refs);
+//    autofocus: document.querySelector('[data-modal-franches-autofocus]'),
+// };
+// modalLoad(refs);
 
 // ----------------------------------------------------------------------------------------
 // ------------------------------------ Тут не лізти --------------------------------------
@@ -92,3 +92,30 @@ function modalLoad(refs) {
 //       refs.submitBtn.toggleAttribute('disabled');
 //    }
 // })();
+
+// ----------------------------------------------------------------------------------------
+// ------------------------------------ Скрипт для анімації кліпання морозива -------------
+
+const _pictureArr = document.querySelectorAll('.hero__company-info picture');
+_pictureArr[0].classList.add('visually-hidden');
+let prev_offset = 9999;
+
+window.onscroll = () => changeHeaderBackground();
+function changeHeaderBackground() {
+   const header = document.querySelector('.container.hero');
+   const headerOffset = header.offsetHeight / 1.5;
+   const pageOffset = window.pageYOffset;
+
+   if (prev_offset > headerOffset && pageOffset < headerOffset) {
+      setTimeout(() => {
+         _pictureArr[1].classList.add('visually-hidden');
+         _pictureArr[0].classList.remove('visually-hidden');
+      }, 180);
+      setTimeout(() => {
+         _pictureArr[1].classList.remove('visually-hidden');
+         _pictureArr[0].classList.add('visually-hidden');
+      }, 750);
+   }
+
+   prev_offset = pageOffset;
+}
