@@ -18,6 +18,8 @@
     }
 
     & .hero__btn__modal {
+        @include flex($gap: 7px);
+
         @include tablet() {
             display: none;
         }

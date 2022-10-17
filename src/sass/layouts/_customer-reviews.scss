@@ -1,12 +1,12 @@
 .customer {
     width: $mobile;
-    padding: 80px 20px 394px;
+    padding: 186px 20px 394px;
 
     @include margin-auto;
 
     @include tablet() {
         width: $tablet;
-        padding: 60px 31px 383px;
+        padding: 223px 31px 383px;
 
     }
 
@@ -120,6 +120,7 @@
         background-color: getColor('background');
         border-radius: 10px;
         margin-bottom: 30px;
+        @include margin-auto();
 
         @include tablet() {
             max-width: 705px;

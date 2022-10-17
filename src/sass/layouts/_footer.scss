@@ -26,18 +26,15 @@
    &__address {
       display: flex;
       justify-content: center;
-      width: 244px;
       margin-left: auto;
       margin-bottom: 40px;
 
       @include tablet() {
-         width: 300px;
          margin-bottom: 56px;
       }
 
       @include desktop() {
          margin-bottom: 60px;
-         width: 340px;
       }
    }
 

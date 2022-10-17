@@ -1,8 +1,12 @@
 .contacts {
-   margin-top: -96px;
+   margin-top: -345px;
    position: relative;
    z-index: 999;
    margin-bottom: 120px;
+
+   @include desktop() {
+      margin-top: -96px;
+   }
 }
 
 .contacts__list {
