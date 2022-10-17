@@ -1,0 +1,24 @@
+// секція HEADER-HERO
+// ссилка "How it’s made?"
+.how-its-made {
+   // Планшетна та мобільна версія
+   @include fonts($fw: 600, $fs: 8px, $lh: 10px);
+   font-style: normal;
+   text-decoration: underline;
+   color: getColor(accent);
+   @include animation(color);
+
+   // десктопна версія
+   @media screen and (min-width: 1200px) {
+      @include fonts($fw: 600, $fs: 14px, $lh: 17px);
+   }
+   &:hover {
+      color: getColor(btn-hover);
+   }
+   &:focus {
+      color: getColor(btn-focus);
+   }
+   &:disabled {
+      color: getColor(btn-disabled);
+   }
+}

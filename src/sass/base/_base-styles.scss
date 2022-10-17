@@ -4,26 +4,31 @@ body {
    color: getColor('txt-white');
 }
 
-// .backdrop {
-//    position: fixed;
-//    top: 0;
-//    left: 0;
-//    z-index: 1000;
+.backdrop {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;
 
-//    width: 100%;
-//    height: 100%;
-//    background: rgba(0, 0, 0, 0.2);
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.2);
 
-//    transition: scale var(--animation-time) var(--transition-timing-function);
-// }
+   transition: scale var(--animation-time) var(--transition-timing-function);
+}
 
 .container {
    width: $mobile;
+   padding: 0 20px;
+   @include margin-auto();
+
    @include tablet() {
       width: $tablet;
+      padding: 0 32px;
    }
 
    @include desktop() {
       width: $desktop;
+      padding: 0 16px;
    }
 }

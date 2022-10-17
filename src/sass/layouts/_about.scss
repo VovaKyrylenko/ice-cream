@@ -1,0 +1,195 @@
+.about-us {
+   padding-top: 60px;
+   padding-bottom: 60px;
+
+   background: getColor(background);
+   background-color: getColor(background);
+
+   .about-us__subtitle {
+      @include fonts($fw: 700, $fs: 18px, $lh: 22px);
+      text-align: center;
+      text-transform: uppercase;
+      color: getColor('txt-white');
+
+      @include tablet() {
+         @include fonts($fw: 800, $fs: 22px, $lh: 27px, $ls: 0.04em);
+      }
+
+      @include desktop() {
+         @include fonts($fw: 800, $fs: 30px, $lh: 37px, $ls: 0.04em);
+      }
+   }
+
+   &__title {
+      @include fonts($ff: Seymour One, $fs: 30px, $lh: 38px, $ls: 0.04em);
+      text-align: center;
+      text-transform: uppercase;
+      color: getColor('txt-white');
+
+      margin-top: 12px;
+
+      @include tablet() {
+         @include fonts($ff: Seymour One, $fs: 34px, $lh: 43px, $ls: 0.06em);
+      }
+
+      @include desktop() {
+         @include fonts($ff: Seymour One, $fs: 36px, $lh: 45px, $ls: 0.06em);
+      }
+   }
+
+   &__block {
+      @include tablet() {
+         display: flex;
+         justify-content: start;
+         align-items: start;
+      }
+
+      @include desktop() {
+         display: flex;
+         justify-content: start;
+         align-items: start;
+      }
+   }
+
+   &__thumb {
+      display: block;
+      position: relative;
+      margin: 53px auto 0;
+
+      @include tablet() {
+         margin: 72px 0 0;
+         width: 330px;
+         height: 330px;
+      }
+
+      @include desktop() {
+         margin: 82px 0 0;
+         width: 490px;
+         height: 490px;
+      }
+
+      &::before {
+         content: '';
+         display: block;
+         @include block(
+            $w: 100%,
+            $h: 100%,
+            $radius: 50%,
+            $border: 0,
+            $shadow: #{0 4.48583px 16.8218px #99721740},
+            $bg: #{linear-gradient(0deg, #f8d24eb3, #f8d24eb3),
+            #d9d9d9}
+         );
+
+         position: absolute;
+         top: -8%;
+         left: 0;
+         z-index: 2;
+
+         background-color: getColor('accent');
+
+         @include mobile() {
+            width: 278px;
+            height: 278px;
+         }
+
+         @include tablet() {
+            width: 330px;
+            height: 330px;
+         }
+
+         @include desktop() {
+            width: 490px;
+            height: 490px;
+         }
+      }
+   }
+
+   &__img {
+      display: block;
+      @include block($radius: 50%);
+      position: relative;
+      z-index: 3;
+
+      @include mobile() {
+         width: 278px;
+         height: 278px;
+      }
+
+      @include tablet() {
+         width: 330px;
+         height: 330px;
+      }
+
+      @include desktop() {
+         width: 490px;
+         height: 490px;
+      }
+   }
+
+   &__right-block {
+      margin-top: 40px;
+      padding: 0 30px;
+      width: 100%;
+
+      @include tablet() {
+         padding: 0;
+         margin-left: auto;
+         margin-top: 79px;
+         width: 334px;
+      }
+
+      @include desktop() {
+         margin-left: auto;
+         margin-right: 105px;
+         margin-top: 172px;
+         width: 464px;
+      }
+   }
+
+   &__txt {
+      @include fonts($fs: 12px, $lh: 21px, $ls: 0.04em);
+
+      text-align: center;
+      color: getColor('txt-white');
+
+      @include tablet() {
+         text-align: left;
+         @include fonts($fs: 12px, $lh: 21px, $ls: 0.04em);
+      }
+
+      @include desktop() {
+         @include fonts($fs: 16px, $lh: 28px, $ls: 0.04em);
+      }
+
+      &:not(--last) {
+         margin-bottom: 4px;
+
+         @include desktop() {
+            margin-bottom: 8px;
+         }
+      }
+
+      &--last {
+         display: none;
+
+         @include tablet() {
+            display: block;
+         }
+      }
+   }
+
+   &__btn {
+      @include fonts($fw: 600, $fs: 14px, $lh: 18px);
+
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @extend .read-more-btn;
+   }
+
+   &__icon {
+      margin-left: 5px;
+   }
+}

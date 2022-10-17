@@ -1,0 +1,123 @@
+// секція ADVANTAGES
+// кнопка "Read more"
+// десктопна, планшетна і мобільна версія
+.read-more-btn {
+   display: block;
+   width: 164px;
+   height: 42px;
+
+   @include fonts($fw: 600, $fs: 14px, $lh: 18px);
+   font-style: normal;
+
+   color: getColor(txt-black);
+   background-color: getColor(btn-default);
+   border: 2px solid transparent;
+   border-radius: 10px;
+   @include animation(color);
+   @include animation(background-color);
+
+   &:hover {
+      background-color: getColor(btn-hover);
+   }
+   &:focus {
+      color: getColor(txt-white);
+      background-color: getColor(btn-focus);
+   }
+   &:disabled {
+      background-color: getColor(btn-disabled);
+   }
+}
+
+// секція HEADER-HERO
+// кнопка "Buy now"
+// десктопна, планшетна і мобільна версія
+.buy-now-btn {
+   display: flex;
+   width: 152px;
+   height: 42px;
+
+   @include fonts($fw: 600, $fs: 14px, $lh: 17px);
+   font-style: normal;
+
+   color: getColor(txt-black);
+   background-color: getColor(btn-default);
+   border: 2px solid transparent;
+   border-radius: 10px;
+   @include animation(color);
+   @include animation(background-color);
+
+   &:hover {
+      background-color: getColor(btn-hover);
+   }
+   &:focus {
+      color: getColor(txt-white);
+      background-color: getColor(btn-focus);
+   }
+   &:disabled {
+      background-color: getColor(btn-disabled);
+   }
+}
+
+// секція CONTACTS
+// кнопка "Our Locations"
+// десктопна, планшетна і мобільна версія
+.our-locations-btn {
+   display: flex;
+   width: 196px;
+   height: 42px;
+
+   @include fonts($fw: 600, $fs: 14px, $lh: 18px);
+   font-style: normal;
+
+   color: getColor(txt-black);
+   background-color: getColor(btn-default);
+   border: 2px solid transparent;
+   border-radius: 10px;
+   @include animation(color);
+   @include animation(background-color);
+
+   &:hover {
+      background-color: getColor(btn-hover);
+   }
+   &:focus {
+      color: getColor(txt-white);
+      background-color: getColor(btn-focus);
+   }
+   &:disabled {
+      background-color: getColor(btn-disabled);
+   }
+}
+
+// кнопка "Submit" для модалок
+.submit-btn {
+   // мобільна версія
+   display: block;
+   width: 114px;
+   height: 42px;
+
+   @include fonts($fw: 600, $fs: 12px, $lh: 15px);
+   font-style: normal;
+
+   color: getColor(txt-black);
+   background-color: getColor(btn-default);
+   border: 2px solid transparent;
+   border-radius: 10px;
+   @include animation(color);
+   @include animation(background-color);
+
+   // десктопна, планшетна версія
+   @media screen and (min-width: 480px) {
+      @include fonts($fw: 600, $fs: 14px, $lh: 17px);
+      width: 121px;
+   }
+   &:hover {
+      background-color: getColor(btn-hover);
+   }
+   &:focus {
+      color: getColor(txt-white);
+      background-color: getColor(btn-focus);
+   }
+   &:disabled {
+      background-color: getColor(btn-disabled);
+   }
+}

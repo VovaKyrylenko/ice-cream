@@ -1,0 +1,106 @@
+.franchise-modal {
+   @include centerAbsolute;
+   width: 100%;
+   max-width: 280px;
+   min-height: 674px;
+   background-color: getColor('txt-white');
+   border-radius: 10px;
+   padding: 28px 30px 28px 29px;
+
+   @include desktop {
+      max-width: 568px;
+      min-height: 668px;
+      padding: 32px 60px;
+   }
+}
+.modal-btn {
+   width: 16px;
+   height: 16px;
+   position: absolute;
+   top: 8px;
+   right: 8px;
+   background-color: transparent;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   @include desktop {
+      top: 20px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+   }
+}
+
+.franchise-modal_descr {
+   @include margin-auto;
+   color: getColor('txt-black');
+   margin-bottom: 20px;
+   @include fonts($ff: 'Seymour One', $fw: 400, $fs: 16px, $lh: 24px, $ls: 0);
+
+   @include desktop {
+      width: 322px;
+      @include fonts(
+         $ff: 'Seymour One',
+         $fw: 400,
+         $fs: 20px,
+         $lh: 28px,
+         $ls: 0
+      );
+   }
+}
+
+.franchise-modal_text {
+   color: getColor('txt-black');
+   margin-bottom: 24px;
+   @include fonts($ff: 'Montserrat', $fw: 400, $fs: 14px, $lh: 20px, $ls: 0);
+
+   @include desktop {
+      @include fonts($ff: 'Montserrat', $fw: 400, $fs: 16px, $lh: 22px, $ls: 0);
+      margin-bottom: 32px;
+   }
+}
+
+.franchise-modal__register {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   margin-bottom: 24px;
+
+   @include desktop {
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 32px;
+   }
+}
+
+.franchise-modal__input {
+   width: 100%;
+   height: 32px;
+   background: rgba(248, 210, 78, 0.1);
+   border: 1px solid #84a178;
+   border-radius: 10px;
+   padding: 8px 12px 7px 12px;
+   outline: transparent;
+   cursor: pointer;
+   @include desktop {
+      width: 368px;
+      height: 42px;
+      padding: 11px 16px 11px 16px;
+   }
+}
+.franchise-modal__input-comment {
+   width: 224px;
+   height: 64px;
+
+   @include desktop {
+      width: 368px;
+      height: 84px;
+   }
+}
+.submit-btn {
+   display: block;
+   @include margin-auto;
+}
+

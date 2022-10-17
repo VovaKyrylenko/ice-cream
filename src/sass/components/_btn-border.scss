@@ -1,0 +1,65 @@
+// секція HEADER-HERO
+// кнопка "Products"
+.products-btn {
+   // Планшетна та мобільна версія
+   display: block;
+   width: 62px;
+   height: 24px;
+
+   @include fonts($fw: 600, $fs: 8px, $lh: 10px);
+   font-style: normal;
+
+   background-color: transparent;
+   color: getColor(txt-black);
+   border: 2px solid getColor(accent);
+   border-radius: 8px;
+   @include animation(color);
+   @include animation(border);
+
+   // десктопна версія
+   @media screen and (min-width: 1200px) {
+      @include fonts($fw: 600, $fs: 14px, $lh: 18px);
+      border-radius: 10px;
+   }
+
+   &:hover {
+      border: 2px solid getColor(btn-hover);
+   }
+   &:focus {
+      color: getColor(txt-white);
+      border: 2px solid getColor(btn-focus);
+   }
+   &:disabled {
+      border: 2px solid getColor(btn-disabled);
+   }
+}
+
+// секція CONTACTS
+// кнопка "Franchise"
+// десктопна, планшетна і мобільна версія
+.franchise-btn {
+   display: flex;
+   width: 196px;
+   height: 42px;
+
+   @include fonts($fw: 600, $fs: 14px, $lh: 18px);
+   font-style: normal;
+
+   background-color: transparent;
+   color: getColor(txt-black);
+   border: 2px solid getColor(accent);
+   border-radius: 10px;
+   @include animation(color);
+   @include animation(border);
+
+   &:hover {
+      border: 2px solid getColor(btn-hover);
+   }
+   &:focus {
+      color: getColor(txt-white);
+      border: 2px solid getColor(btn-focus);
+   }
+   &:disabled {
+      border: 2px solid getColor(btn-disabled);
+   }
+}
