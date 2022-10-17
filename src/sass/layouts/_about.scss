@@ -5,6 +5,38 @@
    background: getColor(background);
    background-color: getColor(background);
 
+   .about-us__subtitle {
+      @include fonts($fw: 700, $fs: 18px, $lh: 22px);
+      text-align: center;
+      text-transform: uppercase;
+      color: getColor('txt-white');
+
+      @include tablet() {
+         @include fonts($fw: 800, $fs: 22px, $lh: 27px, $ls: 0.04em);
+      }
+
+      @include desktop() {
+         @include fonts($fw: 800, $fs: 30px, $lh: 37px, $ls: 0.04em);
+      }
+   }
+
+   &__title {
+      @include fonts($ff: Seymour One, $fs: 30px, $lh: 38px, $ls: 0.04em);
+      text-align: center;
+      text-transform: uppercase;
+      color: getColor('txt-white');
+
+      margin-top: 12px;
+
+      @include tablet() {
+         @include fonts($ff: Seymour One, $fs: 34px, $lh: 43px, $ls: 0.06em);
+      }
+
+      @include desktop() {
+         @include fonts($ff: Seymour One, $fs: 36px, $lh: 45px, $ls: 0.06em);
+      }
+   }
+
    &__block {
       @include tablet() {
          display: flex;
@@ -17,28 +49,6 @@
          justify-content: start;
          align-items: start;
       }
-   }
-
-   .about-us__subtitle {
-      @include fonts($ff: Montserrat, $fw: 700, $fs: 18px, $lh: 22px, $ls: 0em);
-      text-align: center;
-      text-transform: uppercase;
-      color: getColor('txt-white');
-   }
-
-   &__title {
-      @include fonts(
-         $ff: Seymour One,
-         $fw: 400,
-         $fs: 30px,
-         $lh: 38px,
-         $ls: 0.04em
-      );
-      text-align: center;
-      text-transform: uppercase;
-      color: getColor('txt-white');
-
-      margin-top: 12px;
    }
 
    &__thumb {
@@ -138,18 +148,18 @@
    }
 
    &__txt {
-      @include fonts(
-         $ff: Montserrat,
-         $fw: 400,
-         $fs: 12px,
-         $lh: 21px,
-         $ls: 0.04em
-      );
+      @include fonts($fs: 12px, $lh: 21px, $ls: 0.04em);
+
       text-align: center;
       color: getColor('txt-white');
 
       @include tablet() {
          text-align: left;
+         @include fonts($fs: 12px, $lh: 21px, $ls: 0.04em);
+      }
+
+      @include desktop() {
+         @include fonts($fs: 16px, $lh: 28px, $ls: 0.04em);
       }
 
       &:not(--last) {
@@ -170,7 +180,7 @@
    }
 
    &__btn {
-      @include fonts($ff: Montserrat, $fw: 600, $fs: 14px, $lh: 18px, $ls: 0em);
+      @include fonts($fw: 600, $fs: 14px, $lh: 18px);
 
       margin-top: 20px;
       margin-left: auto;
