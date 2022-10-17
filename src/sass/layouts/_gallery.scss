@@ -1,15 +1,18 @@
 .gallery {
+  position: relative;
+  z-index: 999;
   margin-top: -24px;
+  margin-bottom: -106px;
 
   @include tablet() {
     margin-top: -164px;
+    margin-bottom: -161px;
   }
 
   @include desktop () {
     margin-top: -94px;
     margin-bottom: -328px;
-    position: relative;
-    z-index: 999;
+    
   }
 
   // &-item {

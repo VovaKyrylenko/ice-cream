@@ -13,6 +13,8 @@
    color: getColor(txt-black);
    border: 2px solid getColor(accent);
    border-radius: 8px;
+   @include animation(color);
+   @include animation(border);
 
    // десктопна версія
    @media screen and (min-width: 1200px) {
@@ -36,7 +38,7 @@
 // кнопка "Franchise"
 // десктопна, планшетна і мобільна версія
 .franchise-btn {
-   display: block;
+   display: flex;
    width: 196px;
    height: 42px;
 
@@ -47,6 +49,8 @@
    color: getColor(txt-black);
    border: 2px solid getColor(accent);
    border-radius: 10px;
+   @include animation(color);
+   @include animation(border);
 
    &:hover {
       border: 2px solid getColor(btn-hover);
