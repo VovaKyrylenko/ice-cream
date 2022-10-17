@@ -1,4 +1,9 @@
-<div class="modal-ingridients">
+<div class="modal-ingridients visually-hidden">
+   <button class="modal-btn" type="button">
+      <svg width="20" height="20">
+         <use href="./images/icons.svg#icon-menu-close"></use>
+      </svg>
+   </button>
    <p class="modal-ingridients__title">Chololate icecream</p>
    <div class="modal-ingridients__wrapper">
       <div class="modal-ingridients__image-element"></div>
@@ -76,13 +81,14 @@
    </ul>
    <form action="" class="modal-ingridients__form">
       <label for="" class="modal-ingridients__label">
-         <input type="text" class="modal-ingridients__input" placeholder="Name">
+         <input type="text" class="modal-ingridients__input" placeholder="Name" required>
       </label>
       <label for="" class="modal-ingridients__label">
-         <input type="text" class="modal-ingridients__input" placeholder="Phone">
+         <input type="tel" class="modal-ingridients__input" placeholder="Phone" required>
       </label>
       <label for="" class="modal-ingridients__label">
-         <textarea type="text" class="modal-ingridients__input modal-ingridients__textarea" placeholder="Comment">
+         <textarea type="text" class="modal-ingridients__input modal-ingridients__textarea"
+            placeholder="Comment"></textarea>
       </label>
       <button type="submit">Submit</button>
    </form>

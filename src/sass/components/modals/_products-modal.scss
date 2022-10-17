@@ -1,0 +1,141 @@
+.modal-buy {
+   @include block($w: 568px,
+      $h: auto,
+      $radius: 10px,
+      $border: 2px solid getColor($key: 'accent'),
+      $shadow: 0,
+      $bg: getColor($key: 'txt-white'));
+   @include flex($ai: center, $jc: center, $gap: 0, $fd: column);
+   padding: 32px 54px;
+   @include centerAbsolute;
+
+   color: getColor('txt-black');
+
+   &__check-item {
+      filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+      border-radius: 15.7808px;
+   }
+
+   &__check-item--green {
+      border: 2px solid #96AF8C;
+      @include animation(background-color);
+   }
+
+   &__check-item--yellow {
+      border: 2px solid #EFD478;
+      @include animation(background-color);
+   }
+
+   &__check-item--brown {
+      border: 2px solid #D6936D;
+      @include animation(background-color);
+   }
+
+
+   &__check-item--green:checked {
+      background-color: #96AF8C;
+   }
+
+   &__check-item--yellow:checked {
+      background-color: #EFD478;
+   }
+
+   &__form {
+      width: 368px;
+      @include flex($gap: 16px, $fd: column);
+   }
+
+   &__image {
+      @include block($w: 131px, $h: 131px, $radius: 50%);
+      position: absolute;
+      top: -7px;
+      left: 0;
+   }
+
+   &__image-element {
+      @include block($w: 131px,
+         $h: 131px,
+         $radius: 50%,
+         $shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25));
+      margin-bottom: 20px;
+   }
+
+   &__image-element--green {
+      background: #96AF8C;
+   }
+
+   &__image-element--yellow {
+      background: #EFD478;
+   }
+
+   &__image-element--brown {
+      background: #D6936D;
+   }
+
+   &__item-span {
+      display: block;
+      @include fonts($fw: 700, $fs: 16px, $lh: 20px, $ls: 0.04em);
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+   }
+
+   &__list-check {
+      @include flex();
+      margin-bottom: 40px;
+   }
+
+   &__wrapper {
+      position: relative;
+      margin-top: -63px;
+      width: 131px;
+   }
+
+   &__checkbox {
+      display: none;
+   }
+
+   &__textarea {
+      margin-bottom: 24px;
+   }
+}
+
+.modal-title--buy {
+   margin-bottom: 103px;
+}
+
+.modal-ingridients {
+   &__input {}
+
+   &__label {}
+
+   &__textarea {}
+}
+
+.modal-buy__checkbox--brown:checked~.modal-buy__check-item--brown {
+   background-color: #D6936D;
+}
+
+.modal-buy__checkbox--green:checked~.modal-buy__check-item--green {
+   background-color: #96AF8C;
+}
+
+.modal-buy__checkbox--yellow:checked~.modal-buy__check-item--yellow {
+   background-color: #EFD478;
+}
+
+@include mobile() {
+   .modal-buy {
+      @include block($w: 280px,
+         $h: auto,
+         $radius: 10px,
+         $border: 2px solid getColor($key: 'accent'),
+         $shadow: 0,
+         $bg: getColor($key: 'txt-white'));
+
+      &__list-check {
+         @include flex($fd: column, $gap: 83px);
+         margin-bottom: 40px;
+      }
+   }
+}
