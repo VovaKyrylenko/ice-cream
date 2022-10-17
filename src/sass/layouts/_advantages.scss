@@ -1,5 +1,5 @@
     .advantages {
-        padding-bottom: 180px;
+        padding-bottom: 60px;
     }
 
 
@@ -9,12 +9,12 @@
     }
 
     .advantages__list {
-        @include flex($gap: 80px);
+        @include flex($gap: 27px, $fd: column);
     }
 
     .advantages__item {
         @include flex($fd: column, $gap: 16px);
-        width: calc((100% - 32px * 2) / 3);
+        width: 100%;
     }
 
     .advantages__icon {
@@ -25,16 +25,15 @@
     .advantages__text {
         @include fonts($fs: 16px, $lh: 28px);
         text-align: center;
-        width: 266px;
     }
 
     .advantages__info {
-        @include fonts($fw: 700, $fs: 58px, $lh: 71px);
+        @include fonts($fw: 700, $fs: 36px, $lh: 42px, $ls: 0.02em);
     }
 
     @include tablet() {
         .advantages {
-            padding-bottom: 180px;
+            padding-bottom: 204px;
         }
 
 

@@ -13,7 +13,7 @@
         visibility: visible;
         pointer-events: all;
         overflow: scroll;
-        z-index: 1;
+        z-index: 1000;
         background-color: getColor('background');
     }
 
@@ -168,7 +168,7 @@
     &:hover,
     &:focus {
         color: getColor(accent);
-        transition: color 250ms $animation;
+        transition: color $animation;
     }
 
     @include tablet {
@@ -431,25 +431,26 @@
 .hero__anchor-products {
     display: inline-block;
     padding: 6px 12px;
-    
+
     border: 2px solid getColor(accent);
     border-radius: 8px;
 
     @include fonts ($fs: 8px, $lh: 10px, $fw: 600);
     color: getColor(txt-black);
-    
-    transition: color 250ms $animation, border-color 250ms $animation;
+
+    transition: color $animation, border-color $animation;
 
     &:hover {
         border: 2px solid getColor(btn-hover);
     }
+
     &:focus {
         border: 2px solid getColor(btn-hover);
         color: getColor(txt-white);
 
     }
 
-    @include desktop {    
+    @include desktop {
         @include fonts ($fs: 14px, $lh: 18px, $fw: 600);
         padding: 12px 34px;
         border-radius: 10px;
@@ -460,18 +461,19 @@
     display: inline-block;
     padding: 8px 12px;
     text-decoration: underline;
-    
+
     @include fonts ($fs: 8px, $lh: 10px, $fw: 600);
-    
-    transition: color 250ms $animation;
+
+    transition: color $animation;
 
     &:hover {
         color: getColor(btn-hover);
     }
+
     &:focus {
         color: getColor(txt-white);
     }
-    
+
     @include desktop {
         @include fonts ($fs: 14px, $lh: 18px, $fw: 600);
         padding: 14px 34px;
