@@ -121,7 +121,7 @@ modalLoad(refs);
 // ------------------------------------ Тут не лізти --------------------------------------
 
 function modalLoad(refs) {
-   refs.modal.style.display = 'none';
+   refs.modal.classList.add('visually-hidden');
 
    refs.openModalBtn.addEventListener('click', () => toggleModal(true));
    refs.closeModalBtn.addEventListener('click', () => toggleModal(false));
@@ -130,11 +130,19 @@ function modalLoad(refs) {
       // refs.backdrop.classList.toggle('visually-hidden');
       if (value) {
          refs.backdrop.classList.remove('visually-hidden');
+<<<<<<< Updated upstream
          refs.modal.style.display = 'block';
          if (refs.autofocus != null) refs.autofocus.focus();
       } else {
          refs.modal.style.display = 'none';
          refs.backdrop.classList.add('visually-hidden');
+=======
+         refs.modal.classList.remove('visually-hidden');
+         if (refs.autofocus != null) refs.autofocus.focus();
+      } else {
+         refs.backdrop.classList.add('visually-hidden');
+         refs.modal.classList.add('visually-hidden');
+>>>>>>> Stashed changes
       }
    }
 }
