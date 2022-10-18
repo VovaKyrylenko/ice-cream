@@ -1,3 +1,44 @@
+.customer-reviews {
+    background-image: url('../images/bckg/bcgd@1x.webp');
+
+    @include isNotRetinaDisplay() {
+        background-image: url('../images/bckg/bcgm@1x.webp');
+        background-image: url('../images/bckg/bcgm@1x.jpg');
+    }
+
+    @include isRetinaDisplay() {
+        background-image: url('../images/bckg/bcgm@2x.webp');
+        background-image: url('../images/bckg/bcgm@2x.jpg');
+    }
+
+    @include tablet() {
+
+        @include isNotRetinaDisplay() {
+            background-image: url('../images/bckg/bcgt@1x.webp');
+            background-image: url('../images/bckg/bcgd@1x.jpg');
+        }
+
+        @include isRetinaDisplay() {
+            background-image: url('../images/bckg/bcgt@2x.webp');
+            background-image: url('../images/bckg/bcgt@2x.jpg');
+        }
+    }
+
+    @include tablet() {
+
+        @include isNotRetinaDisplay() {
+            background-image: url('../images/bckg/bcgt@1x.webp');
+            background-image: url('../images/bckg/bcgd@1x.jpg');
+        }
+
+        @include isRetinaDisplay() {
+            background-image: url('../images/bckg/bcgt@2x.webp');
+            background-image: url('../images/bckg/bcgt@2x.jpg');
+        }
+
+    }
+}
+
 .customer {
     width: $mobile;
     padding: 186px 20px 394px;
@@ -18,51 +59,12 @@
 }
 
 .customer {
-    background-image: url('../images/bckg/bcgd@1x.webp');
-
-    @include mobile() {
-
-        @include isNotRetinaDisplay() {
-            background-image: url('../images/bckg/bcgm@1x.webp');
-            background-image: url('../images/bckg/bcgm@1x.jpg');
-        }
-
-        @include isRetinaDisplay() {
-            background-image: url('../images/bckg/bcgm@2x.webp');
-            background-image: url('../images/bckg/bcgm@2x.jpg');
-        }
-
-    }
-
     @include tablet() {
-
         @include fonts($fw: 500, $fs: 14px, $lh: 35.7px, $ls: 0.04em);
-
-        @include isNotRetinaDisplay() {
-            background-image: url('../images/bckg/bcgt@1x.webp');
-            background-image: url('../images/bckg/bcgd@1x.jpg');
-        }
-
-        @include isRetinaDisplay() {
-            background-image: url('../images/bckg/bcgt@2x.webp');
-            background-image: url('../images/bckg/bcgt@2x.jpg');
-        }
-
     }
 
     @include desktop() {
-
         @include fonts($fw: 500, $fs: 16px, $lh: 40.8px, $ls: 0.04em);
-
-        @include isNotRetinaDisplay() {
-            background-image: url('../images/bckg/bcgd@1x.webp');
-            background-image: url('../images/bckg/bcgd@1x.jpg');
-        }
-
-        @include isRetinaDisplay() {
-            background-image: url('../images/bckg/bcgd@2x.webp');
-            background-image: url('../images/bckg/bcgd@2x.jpg');
-        }
     }
 
     &__card-text {

@@ -8,6 +8,7 @@
    @include flex($ai: center, $jc: center, $gap: 0, $fd: column);
    padding: 32px 40px;
    @include centerAbsolute;
+   overflow-y: auto;
 
    color: getColor('txt-black');
 
