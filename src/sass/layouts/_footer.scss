@@ -39,7 +39,7 @@
    }
 
    &__address-link {
-      @include fonts($fw: 700, $fs: 12px, $lh: 22.32px, $ls: 0.04em);
+      @include fonts($fw: 700, $fs: 12px, $lh: 22.32px);
       color: getColor('txt-white');
 
       @include tablet() {
@@ -52,7 +52,7 @@
    }
 
    &__address-subtitle {
-      @include fonts($fw: 700, $fs: 12px, $lh: 22.32px, $ls: 0.04em);
+      @include fonts($fw: 700, $fs: 12px, $lh: 22.32px);
       color: getColor('txt-black');
 
       @include tablet() {

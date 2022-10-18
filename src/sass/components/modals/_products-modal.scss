@@ -104,14 +104,6 @@
    margin-bottom: 103px;
 }
 
-.modal-ingridients {
-   &__input {}
-
-   &__label {}
-
-   &__textarea {}
-}
-
 .modal-buy__checkbox--brown:checked~.modal-buy__check-item--brown {
    background-color: #D6936D;
 }
@@ -132,10 +124,15 @@
          $border: 2px solid getColor($key: 'accent'),
          $shadow: 0,
          $bg: getColor($key: 'txt-white'));
+      padding: 28px;
 
       &__list-check {
          @include flex($fd: column, $gap: 83px);
          margin-bottom: 40px;
+      }
+
+      &__form {
+         width: 100%;
       }
    }
 }
