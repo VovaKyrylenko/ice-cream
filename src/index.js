@@ -84,16 +84,16 @@ refs = {
 };
 modalLoad(refs);
 
-// refs = {
-//    backdrop: document.querySelector('[data-backdrop]'),
+refs = {
+   backdrop: document.querySelector('[data-backdrop]'),
 
-//    openModalBtn: document.querySelector('[data-modal-franches-open]'),
-//    closeModalBtn: document.querySelector('[data-modal-franches-close]'),
-//    modal: document.querySelector('[data-modal-franches]'),
+   openModalBtn: document.querySelector('[data-modal-location-open]'),
+   closeModalBtn: document.querySelector('[data-modal-location-close]'),
+   modal: document.querySelector('[data-modal-location]'),
 
-//    autofocus: document.querySelector('[data-modal-franches-autofocus]'),
-// };
-// modalLoad(refs);
+   autofocus: document.querySelector('[data-modal-location-autofocus]'),
+};
+modalLoad(refs);
 
 // refs = {
 //    backdrop: document.querySelector('[data-backdrop]'),
