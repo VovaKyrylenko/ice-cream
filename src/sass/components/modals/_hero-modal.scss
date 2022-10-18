@@ -1,6 +1,6 @@
 .modal-ingridients {
    @include block($w: 568px,
-      $h: auto,
+      $h: 96%,
       $radius: 10px,
       $border: 2px solid getColor($key: 'accent'),
       $shadow: 0,
@@ -8,7 +8,7 @@
    @include flex($ai: center, $jc: center, $gap: 0, $fd: column);
    padding: 32px 40px;
    @include centerAbsolute;
-   overflow-y: auto;
+   overflow-y: scroll;
 
    color: getColor('txt-black');
 

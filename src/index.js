@@ -117,6 +117,28 @@ refs = {
 };
 modalLoad(refs);
 
+refs = {
+   backdrop: document.querySelector('[data-backdrop]'),
+
+   openModalBtn: document.querySelector('.data-modal-products-open-1'),
+   closeModalBtn: document.querySelector('[data-modal-products-close]'),
+   modal: document.querySelector('[data-modal-products]'),
+
+   autofocus: document.querySelector('[data-modal-products-autofocus]'),
+};
+modalLoad(refs);
+
+refs = {
+   backdrop: document.querySelector('[data-backdrop]'),
+
+   openModalBtn: document.querySelector('.data-modal-products-open-2'),
+   closeModalBtn: document.querySelector('[data-modal-products-close]'),
+   modal: document.querySelector('[data-modal-products]'),
+
+   autofocus: document.querySelector('[data-modal-products-autofocus]'),
+};
+modalLoad(refs);
+
 // ----------------------------------------------------------------------------------------
 // ------------------------------------ Тут не лізти --------------------------------------
 
