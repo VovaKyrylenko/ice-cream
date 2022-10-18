@@ -84,39 +84,6 @@ refs = {
 };
 modalLoad(refs);
 
-// refs = {
-//    backdrop: document.querySelector('[data-backdrop]'),
-
-//    openModalBtn: document.querySelector('[data-modal-franches-open]'),
-//    closeModalBtn: document.querySelector('[data-modal-franches-close]'),
-//    modal: document.querySelector('[data-modal-franches]'),
-
-//    autofocus: document.querySelector('[data-modal-franches-autofocus]'),
-// };
-// modalLoad(refs);
-
-// refs = {
-//    backdrop: document.querySelector('[data-backdrop]'),
-
-//    openModalBtn: document.querySelector('[data-modal-franches-open]'),
-//    closeModalBtn: document.querySelector('[data-modal-franches-close]'),
-//    modal: document.querySelector('[data-modal-franches]'),
-
-//    autofocus: document.querySelector('[data-modal-franches-autofocus]'),
-// };
-// modalLoad(refs);
-
-// refs = {
-//    backdrop: document.querySelector('[data-backdrop]'),
-
-//    openModalBtn: document.querySelector('[data-modal-franches-open]'),
-//    closeModalBtn: document.querySelector('[data-modal-franches-close]'),
-//    modal: document.querySelector('[data-modal-franches]'),
-
-//    autofocus: document.querySelector('[data-modal-franches-autofocus]'),
-// };
-// modalLoad(refs);
-
 // ----------------------------------------------------------------------------------------
 // ------------------------------------ Тут не лізти --------------------------------------
 
@@ -127,22 +94,13 @@ function modalLoad(refs) {
    refs.closeModalBtn.addEventListener('click', () => toggleModal(false));
 
    function toggleModal(value) {
-      // refs.backdrop.classList.toggle('visually-hidden');
       if (value) {
          refs.backdrop.classList.remove('visually-hidden');
-<<<<<<< Updated upstream
-         refs.modal.style.display = 'block';
-         if (refs.autofocus != null) refs.autofocus.focus();
-      } else {
-         refs.modal.style.display = 'none';
-         refs.backdrop.classList.add('visually-hidden');
-=======
          refs.modal.classList.remove('visually-hidden');
          if (refs.autofocus != null) refs.autofocus.focus();
       } else {
          refs.backdrop.classList.add('visually-hidden');
          refs.modal.classList.add('visually-hidden');
->>>>>>> Stashed changes
       }
    }
 }
