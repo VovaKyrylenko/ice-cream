@@ -1,6 +1,7 @@
 .contacts {
    position: relative;
    z-index: 999;
+   margin-bottom: 40px;
 
    @include mobile() {
       margin-top: -345px;
