@@ -209,3 +209,21 @@ function changeHeaderBackground() {
 
    prev_offset = pageOffset;
 }
+
+// ----------------------------------------------------------------------------------------
+// ------------------------------------ Повільний скрол вниз ------------------------------
+
+function slowScroll(id) {
+   var offset = 0;
+   $('html, body').animate({
+      scrollTop: $(id).offset().top - offset
+   }, 1000);
+   return false;
+}
+
+document.querySelectorAll('.nav__link')[0].addEventListener('click', () => {slowScroll('#home')});
+document.querySelectorAll('.nav__link')[1].addEventListener('click', () => {slowScroll('#how')});
+document.querySelectorAll('.nav__link')[2].addEventListener('click', () => {slowScroll('#products')});
+document.querySelectorAll('.nav__link')[3].addEventListener('click', () => {slowScroll('#contacts')});
+document.querySelector('.hero__link.hero__anchor-products').addEventListener('click', () => {slowScroll('#products')});
+document.querySelector('.hero__link.hero__anchor-how.how-its-made').addEventListener('click', () => {slowScroll('#how')});
