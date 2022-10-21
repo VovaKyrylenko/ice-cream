@@ -178,7 +178,17 @@ function modalLoad(refs) {
 
 const _pictureArr = document.querySelectorAll('.hero__company-info picture');
 _pictureArr[0].classList.add('visually-hidden');
-let prev_offset = 9999;
+let prev_offset = 0;
+
+setTimeout(() => {
+   _pictureArr[1].classList.add('visually-hidden');
+   _pictureArr[0].classList.remove('visually-hidden');
+   console.log('start');
+}, 500);
+setTimeout(() => {
+   _pictureArr[1].classList.remove('visually-hidden');
+   _pictureArr[0].classList.add('visually-hidden');
+}, 900);
 
 window.onscroll = () => changeHeaderBackground();
 function changeHeaderBackground() {
