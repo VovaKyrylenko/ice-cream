@@ -481,3 +481,19 @@
         padding: 14px 34px;
     }
 }
+
+.hero__animate {
+    animation-name: spin; 
+    animation-duration: 4s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+} 
+
+@keyframes spin { 
+    0% { 
+        transform: rotate(0deg); 
+    } 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+}
