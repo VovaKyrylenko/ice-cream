@@ -2,11 +2,15 @@
    position: relative;
    z-index: 999;
 
-   @media screen and(min-width:768px) {
+   @include mobile() {
+      margin-top: -345px;
+   }
+
+   @include tablet() {
       margin-top: -304px;
    }
 
-   @media screen and(min-width:1200px) {
+   @include desktop() {
       margin-top: -96px;
       margin-bottom: 120px;
    }
@@ -14,8 +18,8 @@
 
 .contacts__list {
    display: flex;
-   flex-direction: column;
    align-items: center;
+   flex-direction: column;
    gap: 20px;
    margin-bottom: 32px;
 
