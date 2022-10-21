@@ -79,7 +79,6 @@
         }
 
         @include desktop {
-            height: 535px;
         }
 
         &::before {
@@ -233,20 +232,25 @@
         color: getColor("txt-black");
 
         @include margin-auto();
-        width: 200px;
-        margin-bottom: 40px;
+
+        margin-bottom: 82px;
+
+        @include tablet() {
+            margin-bottom: 75px;
+        }
+
+        @include desktop() {
+            margin-bottom: 58px;
+        }
     }
 }
 
 .btn__products-icon {
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
+    padding-bottom: 12px;
+
     cursor: pointer;
 
     @include desktop {
-        bottom: 52px;
+        padding-bottom: 52px;
     }
 }
