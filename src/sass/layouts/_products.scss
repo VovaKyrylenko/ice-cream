@@ -2,8 +2,6 @@
     @include margin-auto();
 
     padding: 60px 20px;
-    background-size: contain;
-    overflow: hidden;
 
     @include tablet {
         padding-bottom: 82px;
@@ -19,6 +17,9 @@
 .products {
     text-align: center;
     background-image: url(../images/bckg/bcgd@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
 
 .products {

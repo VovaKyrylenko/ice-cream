@@ -1,5 +1,7 @@
 .customer-reviews {
     background-image: url('../images/bckg/bcgd@1x.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @include isNotRetinaDisplay() {
         background-image: url('../images/bckg/bcgm@1x.webp');
@@ -24,16 +26,16 @@
         }
     }
 
-    @include tablet() {
+    @include desktop() {
 
         @include isNotRetinaDisplay() {
-            background-image: url('../images/bckg/bcgt@1x.webp');
+            background-image: url('../images/bckg/bcgd@1x.webp');
             background-image: url('../images/bckg/bcgd@1x.jpg');
         }
 
         @include isRetinaDisplay() {
-            background-image: url('../images/bckg/bcgt@2x.webp');
-            background-image: url('../images/bckg/bcgt@2x.jpg');
+            background-image: url('../images/bckg/bcgd@2x.webp');
+            background-image: url('../images/bckg/bcgd@2x.jpg');
         }
 
     }

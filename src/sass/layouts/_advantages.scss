@@ -45,6 +45,43 @@
 
         .advantages__list {
             @include flex($gap: 80px);
+
+            // &::before {
+            //     content: '';
+            //     @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+            //     @include flex();
+            // }
+
+            // &.advantages__item--cow::before {
+            //     background-image: url(../images/advantages/cow.png);
+            //     background-repeat: no-repeat;
+            //     background-position: center;
+
+            //     @include isRetinaDisplay() {
+            //         background-image: url(../images/advantages/cow@2x.png);
+
+            //     }
+            // }
+
+            // &.advantages__item--weight::before {
+            //     background-image: url(../images/advantages/weight.png);
+            //     background-repeat: no-repeat;
+            //     background-position: center;
+
+            //     @include isRetinaDisplay() {
+            //         background-image: url(../images/advantages/weight@2x.png);
+            //     }
+            // }
+
+            // &.advantages__item--icecream::before {
+            //     background-image: url(../images/advantages/ice.png);
+            //     background-repeat: no-repeat;
+            //     background-position: center;
+
+            //     @include isRetinaDisplay() {
+            //         background-image: url(../images/advantages/ice@2x.png);
+            //     }
+            // }
         }
 
         .advantages__item {

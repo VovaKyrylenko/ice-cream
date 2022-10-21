@@ -1,8 +1,3 @@
-.container {
-   padding-left: 20px;
-   padding-right: 20px;
-}
-
 .footer {
    padding-bottom: 62px;
 
@@ -19,22 +14,25 @@
       padding-bottom: 8px;
 
       & .container {
-         display: flex;
+         @include flex($gap: 0, $jc: space-between);
       }
    }
 
    &__address {
       display: flex;
       justify-content: center;
+      width: 244px;
       margin-left: auto;
       margin-bottom: 40px;
 
       @include tablet() {
+         width: 300px;
          margin-bottom: 56px;
       }
 
       @include desktop() {
          margin-bottom: 60px;
+         width: 340px;
       }
    }
 
@@ -43,7 +41,7 @@
       color: getColor('txt-white');
 
       @include tablet() {
-         @include fonts($fw: 700, $fs: 14px, $lh: 26.04px, $ls: 0.06em);
+         @include fonts($fw: 700, $fs: 14px, $lh: 26.04px);
       }
 
       @include desktop() {
@@ -56,7 +54,7 @@
       color: getColor('txt-black');
 
       @include tablet() {
-         @include fonts($fw: 700, $fs: 14px, $lh: 26.04px, $ls: 0.06em);
+         @include fonts($fw: 700, $fs: 14px, $lh: 26.04px);
       }
 
       @include desktop() {
@@ -67,7 +65,7 @@
    &__copyright {
       @include margin-auto();
       width: 100%;
-      border-top: 1px solid #e1e1e1;
+      border-top: 1px solid #E1E1E1;
 
       @include tablet() {
          width: 100%;
@@ -84,7 +82,6 @@
       margin-top: 16px;
       margin-left: auto;
       margin-right: auto;
-
       @include fonts($fw: 700, $fs: 14px, $lh: 21.28px);
       color: getColor('footer-copyrights');
 
@@ -104,7 +101,6 @@
    }
 
    &__wrapper {
-      margin-right: auto;
       margin-bottom: 42px;
 
       @include tablet() {
@@ -118,8 +114,6 @@
    }
 
    &__wrapper-group {
-      margin-right: 20px;
-
       @include tablet() {
          display: flex;
          flex-direction: column;
@@ -128,6 +122,27 @@
 
       @include tablet() {
          margin-top: 68px;
+      }
+   }
+
+   &__socials-link {
+      fill: #84A178;
+      transition: fill $animation, width $animation, height $animation;
+      width: 32px;
+      height: 32px;
+
+      &:hover {
+         width: 35px;
+         height: 35px;
+         color: getColor('btn-default');
+         fill: getColor('txt-white');
+      }
+
+      &:focus {
+         width: 35px;
+         height: 35px;
+         color: getColor('btn-default');
+         fill: getColor('txt-white');
       }
    }
 
@@ -182,4 +197,10 @@
          margin-bottom: 14px;
       }
    }
+}
+
+.footer__socials-link:hover .footer__socials-icon,
+.footer__socials-link:focus .footer__socials-icon {
+   width: 35px;
+   height: 35px;
 }
