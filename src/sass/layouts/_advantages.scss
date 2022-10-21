@@ -1,11 +1,147 @@
+    // .advantages {
+    //     padding-bottom: 60px;
+    // }
+
+
+    // .advantages__box {
+    //     @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+    //     @include flex();
+    // }
+
+    // .advantages__list {
+    //     @include flex($gap: 27px, $fd: column);
+    // }
+
+    // .advantages__item {
+    //     @include flex($fd: column, $gap: 16px);
+    //     width: 100%;
+    // }
+
+    // .advantages__icon {
+    //     width: 36px;
+    //     height: 36px;
+    // }
+
+    // .advantages__text {
+    //     @include fonts($fs: 16px, $lh: 28px);
+    //     text-align: center;
+    // }
+
+    // .advantages__info {
+    //     @include fonts($fw: 700, $fs: 36px, $lh: 42px, $ls: 0.02em);
+    // }
+
+    // @include tablet() {
+    //     .advantages {
+    //         padding-bottom: 204px;
+    //     }
+
+
+    //     .advantages__box {
+    //         @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+    //         @include flex();
+    //         margin-bottom: 16px;
+    //     }
+
+    //     .advantages__list {
+    //         @include flex($gap: 80px);
+
+    //         &::before {
+    //             content: '';
+    //             @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+    //             @include flex();
+    //         }
+
+    //         &.advantages__item--cow::before {
+    //             background-image: url(../images/adv/img1d@1x.png);
+    //             background-repeat: no-repeat;
+    //             background-position: center;
+
+    //             @include isRetinaDisplay() {
+    //                 background-image: url(../images/adv/img1d@2x.png);
+
+    //             }
+    //         }
+
+    //         &.advantages__item--weight::before {
+    //             background-image: url(../images/adv/imgd2@1x.png);
+    //             background-repeat: no-repeat;
+    //             background-position: center;
+
+    //             @include isRetinaDisplay() {
+    //                 background-image: url(../images/adv/img2d@2x.png);
+    //             }
+    //         }
+
+    //         &.advantages__item--icecream::before {
+    //             background-image: url(../images/adv/img3d@1x.png);
+    //             background-repeat: no-repeat;
+    //             background-position: center;
+
+    //             @include isRetinaDisplay() {
+    //                 background-image: url(../images/adv/img3d@2x.png);
+    //             }
+    //         }
+    //     }
+
+    //     .advantages__item {
+    //         @include flex($fd: column, $gap: 16px);
+    //         width: calc((100% - 80px * 2) / 3);
+    //     }
+
+    //     .advantages__icon {
+    //         width: 36px;
+    //         height: 36px;
+    //     }
+
+    //     .advantages__text {
+    //         @include fonts($fs: 16px, $lh: 28px);
+    //         text-align: center;
+    //     }
+
+    //     .advantages__info {
+    //         @include fonts($fw: 700, $fs: 58px, $lh: 71px);
+    //     }
+    // }
+
+    // @include desktop() {
+    //     .advantages {
+    //         padding-bottom: 180px;
+    //     }
+
+
+    //     .advantages__box {
+    //         @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+    //         @include flex();
+    //         margin-bottom: 24px;
+    //     }
+
+    //     .advantages__list {
+    //         @include flex();
+    //     }
+
+    //     .advantages__item {
+    //         @include flex($fd: column, $gap: 16px);
+    //         width: calc((100% - 32px * 2) / 3);
+    //     }
+
+    //     .advantages__icon {
+    //         width: 36px;
+    //         height: 36px;
+    //     }
+
+    //     .advantages__text {
+    //         @include fonts($fs: 16px, $lh: 28px);
+    //         text-align: center;
+    //         width: 266px;
+    //     }
+
+    //     .advantages__info {
+    //         @include fonts($fw: 700, $fs: 58px, $lh: 71px);
+    //     }
+    // }  
     .advantages {
         padding-bottom: 60px;
-    }
-
-
-    .advantages__box {
-        @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
-        @include flex();
     }
 
     .advantages__list {
@@ -15,6 +151,30 @@
     .advantages__item {
         @include flex($fd: column, $gap: 16px);
         width: 100%;
+
+        &::before {
+            content: '';
+            @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+            @include flex();
+        }
+
+        &.advantages__item--cow::before {
+            background-image: url(../images/adv/img1d@1x.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &.advantages__item--weight::before {
+            background-image: url(../images/adv/imgd2@1x.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &.advantages__item--icecream::before {
+            background-image: url(../images/adv/img3d@1x.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 
     .advantages__icon {
@@ -36,57 +196,21 @@
             padding-bottom: 204px;
         }
 
-
-        .advantages__box {
-            @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
-            @include flex();
-            margin-bottom: 16px;
-        }
-
         .advantages__list {
             @include flex($gap: 80px);
-
-            // &::before {
-            //     content: '';
-            //     @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
-            //     @include flex();
-            // }
-
-            // &.advantages__item--cow::before {
-            //     background-image: url(../images/advantages/cow.png);
-            //     background-repeat: no-repeat;
-            //     background-position: center;
-
-            //     @include isRetinaDisplay() {
-            //         background-image: url(../images/advantages/cow@2x.png);
-
-            //     }
-            // }
-
-            // &.advantages__item--weight::before {
-            //     background-image: url(../images/advantages/weight.png);
-            //     background-repeat: no-repeat;
-            //     background-position: center;
-
-            //     @include isRetinaDisplay() {
-            //         background-image: url(../images/advantages/weight@2x.png);
-            //     }
-            // }
-
-            // &.advantages__item--icecream::before {
-            //     background-image: url(../images/advantages/ice.png);
-            //     background-repeat: no-repeat;
-            //     background-position: center;
-
-            //     @include isRetinaDisplay() {
-            //         background-image: url(../images/advantages/ice@2x.png);
-            //     }
-            // }
         }
 
         .advantages__item {
             @include flex($fd: column, $gap: 16px);
             width: calc((100% - 80px * 2) / 3);
+
+            &::before {
+                content: '';
+
+                @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+                @include flex();
+                margin-bottom: 16px;
+            }
         }
 
         .advantages__icon {
@@ -109,13 +233,6 @@
             padding-bottom: 180px;
         }
 
-
-        .advantages__box {
-            @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
-            @include flex();
-            margin-bottom: 24px;
-        }
-
         .advantages__list {
             @include flex();
         }
@@ -123,6 +240,14 @@
         .advantages__item {
             @include flex($fd: column, $gap: 16px);
             width: calc((100% - 32px * 2) / 3);
+
+            &::before {
+                content: '';
+
+                @include block($w: 50px, $h: 50px, $bg: getColor(accent), $radius: 50%);
+                @include flex();
+                margin-bottom: 24px;
+            }
         }
 
         .advantages__icon {

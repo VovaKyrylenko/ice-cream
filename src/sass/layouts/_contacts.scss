@@ -1,6 +1,8 @@
 .contacts {
    position: relative;
    z-index: 999;
+   margin-top: -345px;
+   margin-bottom: 40px;
 
    @media screen and(min-width:768px) {
       margin-top: -304px;

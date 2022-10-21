@@ -4,7 +4,7 @@
     & header {
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 101%;
         right: 0;
         top: 0;
         flex-direction: column;
@@ -483,17 +483,18 @@
 }
 
 .hero__animate {
-    animation-name: spin; 
-    animation-duration: 4s; 
-    animation-timing-function: linear; 
-    animation-iteration-count: infinite; 
-} 
+    animation-name: spin;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
 
-@keyframes spin { 
-    0% { 
-        transform: rotate(0deg); 
-    } 
-    100% { 
-        transform: rotate(360deg); 
-    } 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
